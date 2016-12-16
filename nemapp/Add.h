@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  Add.h
 //  nemapp
 //
 //  Created by Ankur Kumawat on 16/12/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface Add : UIViewController
 
 @end
-
