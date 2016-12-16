@@ -1,5 +1,5 @@
 //
-//  Add.h
+//  Setting.h
 //  nemapp
 //
 //  Created by Ankur Kumawat on 16/12/16.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface Add : UIViewController
-//ankur kumawat
-
-
+@interface Setting : UITableViewController
 
 @end
