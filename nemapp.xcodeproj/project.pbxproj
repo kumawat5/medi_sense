@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A846FB811E03BAD300AA98A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FB801E03BAD300AA98A9 /* main.m */; };
+		A846FB841E03BAD300AA98A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FB831E03BAD300AA98A9 /* AppDelegate.m */; };
+		A846FB871E03BAD300AA98A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FB861E03BAD300AA98A9 /* ViewController.m */; };
+		A846FB8A1E03BAD300AA98A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A846FB881E03BAD300AA98A9 /* Main.storyboard */; };
+		A846FB8D1E03BAD300AA98A9 /* nemapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A846FB8B1E03BAD300AA98A9 /* nemapp.xcdatamodeld */; };
+		A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */; };
+		A846FB921E03BAD300AA98A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A846FB901E03BAD300AA98A9 /* LaunchScreen.storyboard */; };
+		A846FB9D1E03BAD300AA98A9 /* nemappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FB9C1E03BAD300AA98A9 /* nemappTests.m */; };
+		A846FBA81E03BAD300AA98A9 /* nemappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FBA71E03BAD300AA98A9 /* nemappUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A846FB991E03BAD300AA98A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A846FB741E03BAD300AA98A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A846FB7B1E03BAD300AA98A9;
+			remoteInfo = nemapp;
+		};
+		A846FBA41E03BAD300AA98A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A846FB741E03BAD300AA98A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A846FB7B1E03BAD300AA98A9;
+			remoteInfo = nemapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A846FB7C1E03BAD300AA98A9 /* nemapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nemapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A846FB801E03BAD300AA98A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A846FB821E03BAD300AA98A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A846FB831E03BAD300AA98A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A846FB851E03BAD300AA98A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A846FB861E03BAD300AA98A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A846FB891E03BAD300AA98A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A846FB8C1E03BAD300AA98A9 /* nemapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nemapp.xcdatamodel; sourceTree = "<group>"; };
+		A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A846FB911E03BAD300AA98A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A846FB931E03BAD300AA98A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A846FB981E03BAD300AA98A9 /* nemappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nemappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A846FB9C1E03BAD300AA98A9 /* nemappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nemappTests.m; sourceTree = "<group>"; };
+		A846FB9E1E03BAD300AA98A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A846FBA31E03BAD300AA98A9 /* nemappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nemappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A846FBA71E03BAD300AA98A9 /* nemappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nemappUITests.m; sourceTree = "<group>"; };
+		A846FBA91E03BAD300AA98A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A846FB791E03BAD300AA98A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FB951E03BAD300AA98A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FBA01E03BAD300AA98A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A846FB731E03BAD300AA98A9 = {
+			isa = PBXGroup;
+			children = (
+				A846FB7E1E03BAD300AA98A9 /* nemapp */,
+				A846FB9B1E03BAD300AA98A9 /* nemappTests */,
+				A846FBA61E03BAD300AA98A9 /* nemappUITests */,
+				A846FB7D1E03BAD300AA98A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A846FB7D1E03BAD300AA98A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A846FB7C1E03BAD300AA98A9 /* nemapp.app */,
+				A846FB981E03BAD300AA98A9 /* nemappTests.xctest */,
+				A846FBA31E03BAD300AA98A9 /* nemappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A846FB7E1E03BAD300AA98A9 /* nemapp */ = {
+			isa = PBXGroup;
+			children = (
+				A846FB821E03BAD300AA98A9 /* AppDelegate.h */,
+				A846FB831E03BAD300AA98A9 /* AppDelegate.m */,
+				A846FB851E03BAD300AA98A9 /* ViewController.h */,
+				A846FB861E03BAD300AA98A9 /* ViewController.m */,
+				A846FB881E03BAD300AA98A9 /* Main.storyboard */,
+				A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */,
+				A846FB901E03BAD300AA98A9 /* LaunchScreen.storyboard */,
+				A846FB931E03BAD300AA98A9 /* Info.plist */,
+				A846FB8B1E03BAD300AA98A9 /* nemapp.xcdatamodeld */,
+				A846FB7F1E03BAD300AA98A9 /* Supporting Files */,
+			);
+			path = nemapp;
+			sourceTree = "<group>";
+		};
+		A846FB7F1E03BAD300AA98A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A846FB801E03BAD300AA98A9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A846FB9B1E03BAD300AA98A9 /* nemappTests */ = {
+			isa = PBXGroup;
+			children = (
+				A846FB9C1E03BAD300AA98A9 /* nemappTests.m */,
+				A846FB9E1E03BAD300AA98A9 /* Info.plist */,
+			);
+			path = nemappTests;
+			sourceTree = "<group>";
+		};
+		A846FBA61E03BAD300AA98A9 /* nemappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A846FBA71E03BAD300AA98A9 /* nemappUITests.m */,
+				A846FBA91E03BAD300AA98A9 /* Info.plist */,
+			);
+			path = nemappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A846FB7B1E03BAD300AA98A9 /* nemapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A846FBAC1E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemapp" */;
+			buildPhases = (
+				A846FB781E03BAD300AA98A9 /* Sources */,
+				A846FB791E03BAD300AA98A9 /* Frameworks */,
+				A846FB7A1E03BAD300AA98A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nemapp;
+			productName = nemapp;
+			productReference = A846FB7C1E03BAD300AA98A9 /* nemapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A846FB971E03BAD300AA98A9 /* nemappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A846FBAF1E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappTests" */;
+			buildPhases = (
+				A846FB941E03BAD300AA98A9 /* Sources */,
+				A846FB951E03BAD300AA98A9 /* Frameworks */,
+				A846FB961E03BAD300AA98A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A846FB9A1E03BAD300AA98A9 /* PBXTargetDependency */,
+			);
+			name = nemappTests;
+			productName = nemappTests;
+			productReference = A846FB981E03BAD300AA98A9 /* nemappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A846FBA21E03BAD300AA98A9 /* nemappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A846FBB21E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappUITests" */;
+			buildPhases = (
+				A846FB9F1E03BAD300AA98A9 /* Sources */,
+				A846FBA01E03BAD300AA98A9 /* Frameworks */,
+				A846FBA11E03BAD300AA98A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A846FBA51E03BAD300AA98A9 /* PBXTargetDependency */,
+			);
+			name = nemappUITests;
+			productName = nemappUITests;
+			productReference = A846FBA31E03BAD300AA98A9 /* nemappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A846FB741E03BAD300AA98A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Sixthsense;
+				TargetAttributes = {
+					A846FB7B1E03BAD300AA98A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A846FB971E03BAD300AA98A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A846FB7B1E03BAD300AA98A9;
+					};
+					A846FBA21E03BAD300AA98A9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A846FB7B1E03BAD300AA98A9;
+					};
+				};
+			};
+			buildConfigurationList = A846FB771E03BAD300AA98A9 /* Build configuration list for PBXProject "nemapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A846FB731E03BAD300AA98A9;
+			productRefGroup = A846FB7D1E03BAD300AA98A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A846FB7B1E03BAD300AA98A9 /* nemapp */,
+				A846FB971E03BAD300AA98A9 /* nemappTests */,
+				A846FBA21E03BAD300AA98A9 /* nemappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A846FB7A1E03BAD300AA98A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A846FB921E03BAD300AA98A9 /* LaunchScreen.storyboard in Resources */,
+				A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */,
+				A846FB8A1E03BAD300AA98A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FB961E03BAD300AA98A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FBA11E03BAD300AA98A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A846FB781E03BAD300AA98A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A846FB8D1E03BAD300AA98A9 /* nemapp.xcdatamodeld in Sources */,
+				A846FB871E03BAD300AA98A9 /* ViewController.m in Sources */,
+				A846FB841E03BAD300AA98A9 /* AppDelegate.m in Sources */,
+				A846FB811E03BAD300AA98A9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FB941E03BAD300AA98A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A846FB9D1E03BAD300AA98A9 /* nemappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A846FB9F1E03BAD300AA98A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A846FBA81E03BAD300AA98A9 /* nemappUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A846FB9A1E03BAD300AA98A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A846FB7B1E03BAD300AA98A9 /* nemapp */;
+			targetProxy = A846FB991E03BAD300AA98A9 /* PBXContainerItemProxy */;
+		};
+		A846FBA51E03BAD300AA98A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A846FB7B1E03BAD300AA98A9 /* nemapp */;
+			targetProxy = A846FBA41E03BAD300AA98A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A846FB881E03BAD300AA98A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A846FB891E03BAD300AA98A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A846FB901E03BAD300AA98A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A846FB911E03BAD300AA98A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A846FBAA1E03BAD300AA98A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A846FBAB1E03BAD300AA98A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A846FBAD1E03BAD300AA98A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = nemapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A846FBAE1E03BAD300AA98A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = nemapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A846FBB01E03BAD300AA98A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = nemappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nemapp.app/nemapp";
+			};
+			name = Debug;
+		};
+		A846FBB11E03BAD300AA98A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = nemappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nemapp.app/nemapp";
+			};
+			name = Release;
+		};
+		A846FBB31E03BAD300AA98A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = nemappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = nemapp;
+			};
+			name = Debug;
+		};
+		A846FBB41E03BAD300AA98A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = nemappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.nemappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = nemapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A846FB771E03BAD300AA98A9 /* Build configuration list for PBXProject "nemapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A846FBAA1E03BAD300AA98A9 /* Debug */,
+				A846FBAB1E03BAD300AA98A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A846FBAC1E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A846FBAD1E03BAD300AA98A9 /* Debug */,
+				A846FBAE1E03BAD300AA98A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A846FBAF1E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A846FBB01E03BAD300AA98A9 /* Debug */,
+				A846FBB11E03BAD300AA98A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A846FBB21E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A846FBB31E03BAD300AA98A9 /* Debug */,
+				A846FBB41E03BAD300AA98A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A846FB8B1E03BAD300AA98A9 /* nemapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A846FB8C1E03BAD300AA98A9 /* nemapp.xcdatamodel */,
+			);
+			currentVersion = A846FB8C1E03BAD300AA98A9 /* nemapp.xcdatamodel */;
+			path = nemapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A846FB741E03BAD300AA98A9 /* Project object */;
+}
