@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 
 @interface Add : UIViewController
 
 
-
+@property (weak, nonatomic) IBOutlet UITextField *tx_time;
+@property (weak, nonatomic) IBOutlet UITextField *tx_dose;
+@property (weak, nonatomic) IBOutlet UITextField *tx_pillname;
+@property (strong) NSManagedObject *device;
+- (IBAction)save:(id)sender;
 
 @end

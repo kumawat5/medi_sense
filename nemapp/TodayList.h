@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "SWTableViewCell.h"
 
-@interface TodayList : UITableViewController
+@interface TodayList : UITableViewController<SWTableViewCellDelegate>
 
 @end

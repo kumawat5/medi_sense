@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15A284" minimumToolsVersion="Automatic">
+    <entity name="Add" syncable="YES">
+        <attribute name="dose" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enddate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="f" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="m" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pill" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pillschedualstatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="su" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="th" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timetakentoday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="todaydate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="todaystatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tu" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Add" positionX="-63" positionY="-18" width="128" height="285"/>
+    </elements>
 </model>
