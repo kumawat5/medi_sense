@@ -30,69 +30,124 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 5;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section==0) {
+        return 3;
+    }
+    else if(section==1){
+        return 2;}
+    else if(section==2){
+        return 1;}
+    else if(section==3){
+        return 1;}
+    else
+        return 1;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:
+(NSInteger)section{
+    NSString *headerTitle;
+    if (section==0) {
+        headerTitle = @"  ";
+    }
+    else if(section==1){
+        headerTitle = @"  ";
+        
+    }
+    else if(section==2){
+        headerTitle =@"  ";
+    }
+    else if(section==3){
+        headerTitle =@"  ";
+    }
+    else
+    {
+        headerTitle =@"  ";
+    }
     
-    // Configure the cell...
+    return headerTitle;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell"];
+  
+    if (indexPath.section==0) {
+            if (indexPath.row == 0) {
+        UITableViewCell * cell1 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell1"];
+        return cell1;
+        }
+        else if (indexPath.row==1){
+            UITableViewCell * cell2 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell2"];
+        return cell2;
+        }
+        else if (indexPath.row==2){
+            UITableViewCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
+            return cell3;
+        }
     
-    return cell;
-}
-*/
+    }
+    else if (indexPath.section==1)
+    {
+     if (indexPath.row ==0) {
+            UITableViewCell * cell4 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell4"];
+            return cell4;
+        }
+        else
+            if (indexPath.row==1) {
+                UITableViewCell * cell5 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell5"];
+                return cell5;
+            }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+    }
+    else if (indexPath.section ==2)
+    {
+        if (indexPath.row==0) {
+            UITableViewCell * cell6 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell6"];
+            return cell6;
+        
+        }
+            }
+    else if (indexPath.section ==3)
+    {
+        if (indexPath.row==0) {
+            UITableViewCell * cell7 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell7"];
+            return cell7;
+            
+        }
+    }
+    else if (indexPath.section ==4)
+    {
+        if (indexPath.row==0) {
+            
+            return cell;
+        }
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+    }
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+   return cell;
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==4) {
+        if (indexPath.row==0) {
+            return 200;
+        }
+    }
+    
+    
+    return 50;
+    
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
-*/
+
 
 @end

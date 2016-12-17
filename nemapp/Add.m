@@ -43,6 +43,127 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.device) {
+        [self.tx_pillname setText:[self.device valueForKey:@"pill"]];
+        [self.tx_dose setText:[self.device valueForKey:@"dose"]];
+        [self.tx_time setText:[self.device valueForKey:@"time"]];
+        if ([[self.device valueForKey:@"su"] isEqualToString:@"Sunday"]) {
+            if ([_sun_btn isSelected]) {
+                [_sun_btn setSelected: NO];
+               // NSLog(@"selected");
+                self.sun_btn.backgroundColor = [UIColor clearColor];
+                sunday = @"nil";
+            } else {
+                [_sun_btn setSelected: YES];
+               // NSLog(@"deselected");
+                self.sun_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                _sun_btn.tintColor=[UIColor clearColor];
+                sunday = @"Sunday";
+                
+            }
+
+
+        }
+        if ([[self.device valueForKey:@"m"] isEqualToString:@"Monday"]) {
+            
+            if ([_mon_btn isSelected]) {
+                [_mon_btn setSelected: NO];
+                //NSLog(@"selected");
+                self.mon_btn.backgroundColor = [UIColor clearColor];
+                monday = @"nil";
+            } else {
+                [_mon_btn setSelected: YES];
+                //NSLog(@"deselected");
+                self.mon_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                _mon_btn.tintColor=[UIColor clearColor];
+                monday = @"Monday";
+                
+            }
+        }
+        if ([[self.device valueForKey:@"tu"] isEqualToString:@"Tuesday"]) {
+            
+            if ([_tue_btn isSelected]) {
+                [_tue_btn setSelected: NO];
+               // NSLog(@"selected");
+                self.tue_btn.backgroundColor = [UIColor clearColor];
+                tuesday = @"nil";
+            } else {
+                [_tue_btn setSelected: YES];
+               // NSLog(@"deselected");
+                self.tue_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                _tue_btn.tintColor=[UIColor clearColor];
+                tuesday = @"Tuesday";
+                
+            }
+
+        }
+        if ([[self.device valueForKey:@"w"] isEqualToString:@"Wednesday"]) {
+            if ([_wed_btn isSelected]) {
+              [_wed_btn setSelected: NO];
+              // NSLog(@"selected");
+               self.wed_btn.backgroundColor = [UIColor clearColor];
+            wednesday = @"nil";
+            } else {
+               [_wed_btn setSelected: YES];
+              // NSLog(@"deselected");
+               self.wed_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+               _wed_btn.tintColor=[UIColor clearColor];
+            wednesday = @"Wednesday";
+            
+        }
+    }
+        if ([[self.device valueForKey:@"th"] isEqualToString:@"Thursday"]) {
+            if ([_th_btn isSelected]) {
+                [_th_btn setSelected: NO];
+                //NSLog(@"selected");
+                self.th_btn.backgroundColor = [UIColor clearColor];
+                thursday = @"nil";
+            } else {
+                [_th_btn setSelected: YES];
+                //NSLog(@"deselected");
+                self.th_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                _th_btn.tintColor=[UIColor clearColor];
+                thursday = @"Thursday";
+                
+            }
+
+            
+        }
+         if ([[self.device valueForKey:@"f"] isEqualToString:@"Friday"]) {
+             if ([_fri_btn isSelected]) {
+                 [_fri_btn setSelected: NO];
+                 //NSLog(@"selected");
+                 self.fri_btn.backgroundColor = [UIColor clearColor];
+                 friday = @"nil";
+             } else {
+                 [_fri_btn setSelected: YES];
+                 //NSLog(@"deselected");
+                 self.fri_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                 _fri_btn.tintColor=[UIColor clearColor];
+                 friday = @"Friday";
+                 
+             }
+         }
+         if ([[self.device valueForKey:@"sa"] isEqualToString:@"Saturday"]) {
+             if ([_sat_btn isSelected]) {
+                 [_sat_btn setSelected: NO];
+                 //NSLog(@"selected");
+                 self.sat_btn.backgroundColor = [UIColor clearColor];
+                 saturday = @"nil";
+             } else {
+                 [_sat_btn setSelected: YES];
+                 //NSLog(@"deselected");
+                 self.sat_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
+                 _sat_btn.tintColor=[UIColor clearColor];
+                 saturday = @"Saturday";
+                 
+             }
+
+         }
+        
+
+    }
+
     // Do any additional setup after loading the view.
      _sun_btn.layer.cornerRadius = 7;
     _sun_btn.layer.masksToBounds = YES;
@@ -235,9 +356,17 @@
     
     if (self.device) {
         // Update existing device
-//        [self.device setValue:self.nameTextField.text forKey:@"name"];
-//        [self.device setValue:self.versionTextField.text forKey:@"version"];
-//        [self.device setValue:self.companyTextField.text forKey:@"company"];
+        [self.device setValue:self.tx_pillname.text forKey:@"pill"];
+        [self.device setValue:self.tx_dose.text forKey:@"dose"];
+        [self.device setValue:self.tx_time.text forKey:@"time"];
+         [self.device setValue:sunday forKey:@"su"];
+        [self.device setValue:monday forKey:@"m"];
+        [self.device setValue:tuesday forKey:@"tu"];
+        [self.device setValue:wednesday forKey:@"w"];
+        [self.device setValue:thursday forKey:@"th"];
+        [self.device setValue:friday forKey:@"f"];
+        [self.device setValue:saturday forKey:@"sa"];
+
         
     } else {
         // Create a new device

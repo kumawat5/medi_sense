@@ -46,6 +46,8 @@
 		A846FC3A1E040A9D00AA98A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FC391E040A9D00AA98A9 /* Foundation.framework */; };
 		A846FC411E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */; };
 		A846FC421E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */; };
+		A8523A861E050E0A00AD1C5B /* AllSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A8523A851E050E0A00AD1C5B /* AllSchedule.m */; };
+		A8523A891E050E2400AD1C5B /* AllscheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8523A881E050E2400AD1C5B /* AllscheduleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,10 @@
 		A846FC391E040A9D00AA98A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-12-16 at 5.16.10 PM.png"; path = "images/Screen Shot 2016-12-16 at 5.16.10 PM.png"; sourceTree = "<group>"; };
 		A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-12-16 at 5.16.34 PM.png"; path = "images/Screen Shot 2016-12-16 at 5.16.34 PM.png"; sourceTree = "<group>"; };
+		A8523A841E050E0A00AD1C5B /* AllSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSchedule.h; sourceTree = "<group>"; };
+		A8523A851E050E0A00AD1C5B /* AllSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSchedule.m; sourceTree = "<group>"; };
+		A8523A871E050E2400AD1C5B /* AllscheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllscheduleCell.h; sourceTree = "<group>"; };
+		A8523A881E050E2400AD1C5B /* AllscheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllscheduleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,10 @@
 				A846FBB61E03BFE000AA98A9 /* Add.m */,
 				A846FBC11E03CEE500AA98A9 /* Setting.h */,
 				A846FBC21E03CEE500AA98A9 /* Setting.m */,
+				A8523A841E050E0A00AD1C5B /* AllSchedule.h */,
+				A8523A851E050E0A00AD1C5B /* AllSchedule.m */,
+				A8523A871E050E2400AD1C5B /* AllscheduleCell.h */,
+				A8523A881E050E2400AD1C5B /* AllscheduleCell.m */,
 				A846FB881E03BAD300AA98A9 /* Main.storyboard */,
 				A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */,
 				A846FB901E03BAD300AA98A9 /* LaunchScreen.storyboard */,
@@ -483,6 +493,7 @@
 				A846FBEF1E03FB2700AA98A9 /* IQUIViewController+Additions.m in Sources */,
 				A846FBF01E03FB2700AA98A9 /* IQUIWindow+Hierarchy.m in Sources */,
 				A846FBB71E03BFE000AA98A9 /* Add.m in Sources */,
+				A8523A891E050E2400AD1C5B /* AllscheduleCell.m in Sources */,
 				A846FC101E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				A846FBF41E03FB2700AA98A9 /* IQBarButtonItem.m in Sources */,
 				A846FBC31E03CEE500AA98A9 /* Setting.m in Sources */,
@@ -491,6 +502,7 @@
 				A846FBEB1E03FB2700AA98A9 /* IQNSArray+Sort.m in Sources */,
 				A846FB841E03BAD300AA98A9 /* AppDelegate.m in Sources */,
 				A846FBF81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				A8523A861E050E0A00AD1C5B /* AllSchedule.m in Sources */,
 				A846FC0D1E0409B000AA98A9 /* SWCellScrollView.m in Sources */,
 				A846FBED1E03FB2700AA98A9 /* IQUITextFieldView+Additions.m in Sources */,
 				A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */,
@@ -733,6 +745,7 @@
 				A846FBAE1E03BAD300AA98A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A846FBAF1E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappTests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +754,7 @@
 				A846FBB11E03BAD300AA98A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A846FBB21E03BAD300AA98A9 /* Build configuration list for PBXNativeTarget "nemappUITests" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +763,7 @@
 				A846FBB41E03BAD300AA98A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

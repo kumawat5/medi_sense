@@ -31,6 +31,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.translucent = NO;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
