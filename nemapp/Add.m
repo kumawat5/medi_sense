@@ -17,6 +17,7 @@
     NSString*friday;
     NSString*saturday;
     NSString*sunday;
+    NSString *hr24time;
 }
 @property (weak, nonatomic) IBOutlet UIButton *sun_btn;
 @property (weak, nonatomic) IBOutlet UIButton *mon_btn;
@@ -217,13 +218,20 @@
 -(void) dateTextField:(id)sender
 {
     UIDatePicker *picker = (UIDatePicker*)_tx_time.inputView;
-    [picker setMaximumDate:[NSDate date]];
+    //[picker setMaximumDate:[NSDate date]];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     NSDate *eventDate = picker.date;
-    [dateFormat setDateFormat:@"H:MM a"];
+    [dateFormat setDateFormat:@"h:mm a"];
     
     NSString *dateString = [dateFormat stringFromDate:eventDate];
     _tx_time.text = [NSString stringWithFormat:@"%@",dateString];
+    
+     NSDateFormatter *Format = [[NSDateFormatter alloc] init];
+    NSDate*date = picker.date;
+    [Format setDateFormat:@"H:mm"];
+    hr24time = [Format stringFromDate:date];
+
+   
 }
 
 
@@ -381,6 +389,7 @@
         [newDevice setValue:thursday forKey:@"th"];
         [newDevice setValue:friday forKey:@"f"];
         [newDevice setValue:saturday forKey:@"sa"];
+        [newDevice setValue:hr24time forKey:@"hr24time"];
         
         NSDate *todayDate = [NSDate date];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

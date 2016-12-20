@@ -14,6 +14,7 @@
 {
     NSMutableArray *patterns;
     NSMutableArray *patternImages;
+    NSMutableArray*mutable_ary;
 }
 
 @property (strong) NSMutableArray *devices;
@@ -43,7 +44,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+   
+    ////////////////////////////////////////////////////////////////
+    
+       
+   }
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -121,11 +126,11 @@
         [self.tableView reloadData];
     }
 
-
-
-
-
-
+    NSLog(@"start dates %@",[_devices valueForKey:@"startdate"]);
+    NSLog(@"end dates %@",[_devices valueForKey:@"enddate"]);
+   
+    // Fetch the devices from persistent data store
+       
 }
 
 
@@ -187,7 +192,16 @@
     if ([[device valueForKey:@"todaystatus"] isEqualToString:@"taken"]) {
        [cell.dot setBackgroundColor:[UIColor greenColor]];
     }
+    else
+    {
+        [cell.dot setBackgroundColor:[UIColor blueColor]];
+    }
     
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"H:mm"];
+    NSString *dateString = [dateFormat stringFromDate:[NSDate date]];
+   // NSLog(@"today date %@",dateString);
+       
     cell.dot.layer.cornerRadius = 10;
     cell.dot.layer.masksToBounds = YES;
     
@@ -201,8 +215,13 @@
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state{
     if(state ==1){
+        //current day
         
-        // current date
+        NSDateFormatter* day = [[NSDateFormatter alloc] init];
+        [day setDateFormat: @"EEEE"];
+       
+        
+        // current time
         NSDate *now = [NSDate date];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"h:mm a";
@@ -216,9 +235,17 @@
         
         NSIndexPath *indexPaths = [self.tableView indexPathForCell:cell];
         NSLog(@"%ld",(long)indexPaths.row);
-         TodayTableViewCell*cell = [self.tableView cellForRowAtIndexPath:indexPaths];
-        [cell.dot setBackgroundColor:[UIColor greenColor]];
-        [cell.takentime setText:[dateFormatter stringFromDate:now]];
+        //new device
+        NSManagedObjectContext *context = [self managedObjectContext];
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Cal" inManagedObjectContext:context];
+        TodayTableViewCell*cells = [self.tableView cellForRowAtIndexPath:indexPaths];
+        
+        [newDevice setValue:cells.name_dose.text forKey:@"pill"];
+        [newDevice setValue:cells.time.text forKey:@"time"];
+        [newDevice setValue:[dateFormatter stringFromDate:now]  forKey:@"timetaken"];
+        [newDevice setValue:convertedDateString  forKey:@"datetaken"];
+        [newDevice setValue:[day stringFromDate:[NSDate date]]  forKey:@"day"];
+        [newDevice setValue:@"taken" forKey:@"takenstatus"];
         
         //update device
         NSManagedObject *selectedDevices = [self.devices objectAtIndex:[self.tableView indexPathForCell:cell].row];
@@ -226,6 +253,11 @@
         [selectedDevices setValue:[dateFormatter stringFromDate:now] forKeyPath:@"timetakentoday"];
         [selectedDevices setValue:@"taken" forKeyPath:@"todaystatus"];
         [selectedDevices setValue:convertedDateString forKeyPath:@"todaydate"];
+        
+        TodayTableViewCell*cell = [self.tableView cellForRowAtIndexPath:indexPaths];
+        [cell.dot setBackgroundColor:[UIColor greenColor]];
+        [cell.takentime setText:[dateFormatter stringFromDate:now]];
+
         
         NSError *saveError = nil;
         [self.managedObjectContext save:&saveError];
@@ -238,6 +270,9 @@
             
             
         }
+        
+        
+        
     }
 }
 

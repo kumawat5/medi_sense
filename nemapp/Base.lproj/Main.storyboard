@@ -216,14 +216,14 @@
                                     <segue destination="EhS-bO-CS8" kind="push" id="761-SA-a1k"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell5" id="eQb-1y-Vu1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell5" id="eQb-1y-Vu1">
                                 <rect key="frame" x="0.0" y="260" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQb-1y-Vu1" id="NsD-V0-su7">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMU-Pg-bG6">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMU-Pg-bG6">
                                             <rect key="frame" x="8" y="10" width="304" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -237,6 +237,9 @@
                                         <constraint firstItem="MMU-Pg-bG6" firstAttribute="top" secondItem="NsD-V0-su7" secondAttribute="topMargin" constant="2" id="sCG-0W-qLD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ekD-Nm-lqO" kind="push" id="Gyb-nf-2bh"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell6" id="ARc-pd-54n">
                                 <rect key="frame" x="0.0" y="302" width="320" height="42"/>
@@ -311,6 +314,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSg-Ao-dvl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="94" y="309"/>
+        </scene>
+        <!--Calender-->
+        <scene sceneID="etz-ip-U3L">
+            <objects>
+                <viewController id="ekD-Nm-lqO" customClass="Calender" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zRR-hP-bEf"/>
+                        <viewControllerLayoutGuide type="bottom" id="nXU-dg-qYq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B10-TI-6Kf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jw8-NY-DJZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfF-JH-Oxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="1246"/>
         </scene>
         <!--Medicine Schedule-->
         <scene sceneID="HG3-2H-GcW">
