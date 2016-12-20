@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *name_dose;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *takentime;
+@property (weak, nonatomic) IBOutlet UILabel *dose_lbl;
 
 @end

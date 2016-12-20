@@ -185,7 +185,8 @@
     
     // Configure the cell...
     NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
-    [cell.name_dose setText:[NSString stringWithFormat:@"%@ - %@", [device valueForKey:@"pill"], [device valueForKey:@"dose"]]];
+    [cell.name_dose setText:[NSString stringWithFormat:@"%@", [device valueForKey:@"pill"]]];
+    [cell.dose_lbl setText:[device valueForKey:@"dose"]];
     [cell.time setText:[device valueForKey:@"time"]];
     [cell.takentime setText:[device valueForKey:@"timetakentoday"]];
     
@@ -235,17 +236,62 @@
         
         NSIndexPath *indexPaths = [self.tableView indexPathForCell:cell];
         NSLog(@"%ld",(long)indexPaths.row);
-        //new device
-        NSManagedObjectContext *context = [self managedObjectContext];
-        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Cal" inManagedObjectContext:context];
-        TodayTableViewCell*cells = [self.tableView cellForRowAtIndexPath:indexPaths];
+        //new-------------------------------
+        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+        // Define our table/entity to use
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Cal"inManagedObjectContext:managedObjectContext];
         
-        [newDevice setValue:cells.name_dose.text forKey:@"pill"];
-        [newDevice setValue:cells.time.text forKey:@"time"];
-        [newDevice setValue:[dateFormatter stringFromDate:now]  forKey:@"timetaken"];
-        [newDevice setValue:convertedDateString  forKey:@"datetaken"];
-        [newDevice setValue:[day stringFromDate:[NSDate date]]  forKey:@"day"];
-        [newDevice setValue:@"taken" forKey:@"takenstatus"];
+        // Setup the fetch request
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        
+        //          //  Define how we will sort the records
+        //            NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dose" ascending:NO];
+        //            NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+        //
+        //            [request setSortDescriptors:sortDescriptors];
+        
+        // Fetch the records and handle an error
+        NSError *Fetcherror;
+        NSMutableArray *mutableFetchResults = [[managedObjectContext
+                                                executeFetchRequest:request error:&Fetcherror] mutableCopy];
+        
+        if (!mutableFetchResults) {
+            // Handle the error.
+            // This is a serious error
+        }
+        
+        
+        //here usersNameTextField.text can be any (id) string that you are searching for
+        TodayTableViewCell*cells = [self.tableView cellForRowAtIndexPath:indexPaths];
+        if (([[mutableFetchResults valueForKey:@"pill"]
+              containsObject:cells.name_dose.text]) && [[mutableFetchResults valueForKey:@"datetaken"]containsObject:convertedDateString] ){
+            //Alert user or handle your duplicate methods from here
+            NSLog(@"exist");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!"message:@"Today already taken pill"
+        delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
+            [alert show];
+        }
+        else
+        {
+            NSLog(@"not exist");
+            //new device
+            NSManagedObjectContext *context = [self managedObjectContext];
+            NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Cal" inManagedObjectContext:context];
+            TodayTableViewCell*cells = [self.tableView cellForRowAtIndexPath:indexPaths];
+            
+            [newDevice setValue:cells.name_dose.text forKey:@"pill"];
+            [newDevice setValue:cells.dose_lbl.text forKey:@"dose"];
+            [newDevice setValue:cells.time.text forKey:@"time"];
+            [newDevice setValue:[dateFormatter stringFromDate:now]  forKey:@"timetaken"];
+            [newDevice setValue:convertedDateString  forKey:@"datetaken"];
+            [newDevice setValue:[day stringFromDate:[NSDate date]]  forKey:@"day"];
+            [newDevice setValue:@"taken" forKey:@"takenstatus"];
+            
+        }
+        
+
+        
         
         //update device
         NSManagedObject *selectedDevices = [self.devices objectAtIndex:[self.tableView indexPathForCell:cell].row];

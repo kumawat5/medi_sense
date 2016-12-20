@@ -394,6 +394,7 @@
         NSDate *todayDate = [NSDate date];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
+       
          [newDevice setValue:convertedDateString forKey:@"startdate"];
         
     }
