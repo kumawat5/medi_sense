@@ -228,7 +228,7 @@
     
      NSDateFormatter *Format = [[NSDateFormatter alloc] init];
     NSDate*date = picker.date;
-    [Format setDateFormat:@"H:mm"];
+    [Format setDateFormat:@"H.mm"];
     hr24time = [Format stringFromDate:date];
 
    
@@ -407,6 +407,25 @@
     
    // [self dismissViewControllerAnimated:YES completion:nil];
      NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
+    
+}
+
+- (IBAction)delete:(id)sender {
+    NSDate *todayDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+    if (self.device) {
+    [self.device setValue:@"delete" forKey:@"pillschedualstatus"];
+    [self.device setValue:convertedDateString forKey:@"enddate"];
+    }
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
     
 }
 @end

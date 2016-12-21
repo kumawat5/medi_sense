@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A822BF2C1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */; };
+		A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */; };
+		A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */; };
+		A822BF361E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */; };
+		A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */; };
+		A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */; };
+		A822BF3B1E0AA77B005AA84B /* Legal.m in Sources */ = {isa = PBXBuildFile; fileRef = A822BF3A1E0AA77B005AA84B /* Legal.m */; };
+		A822BF471E0AB426005AA84B /* 4ByUK.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF461E0AB426005AA84B /* 4ByUK.png */; };
 		A841FCD81E0924AB007E70A0 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA41E0924AB007E70A0 /* NSCalendar+Components.m */; };
 		A841FCD91E0924AB007E70A0 /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA61E0924AB007E70A0 /* NSCalendar+DateComparison.m */; };
 		A841FCDA1E0924AB007E70A0 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA81E0924AB007E70A0 /* NSCalendar+DateManipulation.m */; };
@@ -89,6 +97,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.09.45 PM.png"; sourceTree = "<group>"; };
+		A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.14.02 PM.png"; sourceTree = "<group>"; };
+		A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.16.39 PM.png"; sourceTree = "<group>"; };
+		A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.18.55 PM.png"; sourceTree = "<group>"; };
+		A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.19.22 PM.png"; sourceTree = "<group>"; };
+		A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.19.52 PM.png"; sourceTree = "<group>"; };
+		A822BF391E0AA77B005AA84B /* Legal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Legal.h; sourceTree = "<group>"; };
+		A822BF3A1E0AA77B005AA84B /* Legal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Legal.m; sourceTree = "<group>"; };
+		A822BF461E0AB426005AA84B /* 4ByUK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4ByUK.png; sourceTree = "<group>"; };
 		A841FC9F1E0924AB007E70A0 /* CalendarKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarKit.h; sourceTree = "<group>"; };
 		A841FCA31E0924AB007E70A0 /* NSCalendar+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Components.h"; sourceTree = "<group>"; };
 		A841FCA41E0924AB007E70A0 /* NSCalendar+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Components.m"; sourceTree = "<group>"; };
@@ -376,8 +393,15 @@
 		A846FB731E03BAD300AA98A9 = {
 			isa = PBXGroup;
 			children = (
+				A822BF461E0AB426005AA84B /* 4ByUK.png */,
 				A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */,
 				A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */,
+				A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */,
+				A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */,
+				A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */,
+				A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */,
+				A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */,
+				A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */,
 				A846FC391E040A9D00AA98A9 /* Foundation.framework */,
 				A846FC371E040A9700AA98A9 /* UIKit.framework */,
 				A846FC351E040A9100AA98A9 /* CoreGraphics.framework */,
@@ -421,6 +445,8 @@
 				A8523A881E050E2400AD1C5B /* AllscheduleCell.m */,
 				A841FCEF1E093C3D007E70A0 /* CKDemoViewController.h */,
 				A841FCF01E093C3D007E70A0 /* CKDemoViewController.m */,
+				A822BF391E0AA77B005AA84B /* Legal.h */,
+				A822BF3A1E0AA77B005AA84B /* Legal.m */,
 				A846FB881E03BAD300AA98A9 /* Main.storyboard */,
 				A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */,
 				A846FB901E03BAD300AA98A9 /* LaunchScreen.storyboard */,
@@ -658,9 +684,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */,
+				A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */,
+				A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */,
+				A822BF2C1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png in Resources */,
+				A822BF471E0AB426005AA84B /* 4ByUK.png in Resources */,
 				A846FC411E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png in Resources */,
+				A822BF361E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png in Resources */,
 				A846FB921E03BAD300AA98A9 /* LaunchScreen.storyboard in Resources */,
 				A846FC421E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png in Resources */,
+				A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */,
 				A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */,
 				A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */,
 				A846FB8A1E03BAD300AA98A9 /* Main.storyboard in Resources */,
@@ -700,6 +733,7 @@
 				A841FCE71E0924AB007E70A0 /* CKCalendarView.m in Sources */,
 				A8523A891E050E2400AD1C5B /* AllscheduleCell.m in Sources */,
 				A841FCE11E0924AB007E70A0 /* UIColor+HexString.m in Sources */,
+				A822BF3B1E0AA77B005AA84B /* Legal.m in Sources */,
 				A841FCE91E0924AB007E70A0 /* MBPolygonView.m in Sources */,
 				A846FC101E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				A846FBF41E03FB2700AA98A9 /* IQBarButtonItem.m in Sources */,

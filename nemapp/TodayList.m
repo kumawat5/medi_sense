@@ -47,7 +47,7 @@
    
     ////////////////////////////////////////////////////////////////
     
-       
+        [self.tableView setSeparatorColor:[UIColor clearColor]];
    }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -126,11 +126,7 @@
         [self.tableView reloadData];
     }
 
-    NSLog(@"start dates %@",[_devices valueForKey:@"startdate"]);
-    NSLog(@"end dates %@",[_devices valueForKey:@"enddate"]);
-   
-    // Fetch the devices from persistent data store
-       
+    
 }
 
 
@@ -181,33 +177,74 @@
     cell.leftUtilityButtons = leftUtilityButtons;
     cell.rightUtilityButtons = rightUtilityButtons;
     cell.delegate = self;
+    NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
+    if ([[device valueForKey:@"pillschedualstatus"] isEqualToString:@"delete"]) {
+        //NSLog(@"not show");
+        
+    }
+    else{
+       // NSLog(@"show");
+    
 
     
     // Configure the cell...
-    NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
+   
     [cell.name_dose setText:[NSString stringWithFormat:@"%@", [device valueForKey:@"pill"]]];
     [cell.dose_lbl setText:[device valueForKey:@"dose"]];
     [cell.time setText:[device valueForKey:@"time"]];
     [cell.takentime setText:[device valueForKey:@"timetakentoday"]];
+
     
-    if ([[device valueForKey:@"todaystatus"] isEqualToString:@"taken"]) {
-       [cell.dot setBackgroundColor:[UIColor greenColor]];
+    // Date
+    NSDate *todayDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
+    
+    //Time
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"H:mm"];
+    NSString *TimeString = [dateFormat stringFromDate:[NSDate date]];
+    
+    if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
+    {
+        //NSLog(@"GREEN");
+         [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
     }
+    else if ([[device valueForKey:@"hr24time"] floatValue]  <= [TimeString floatValue] ){
+        // NSLog(@"RED");
+          [cell.dot setBackgroundColor:[UIColor redColor]];
+     }
     else
     {
+        //NSLog(@"Blue");
         [cell.dot setBackgroundColor:[UIColor blueColor]];
     }
     
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"H:mm"];
-    NSString *dateString = [dateFormat stringFromDate:[NSDate date]];
+   
+   
    // NSLog(@"today date %@",dateString);
-       
-    cell.dot.layer.cornerRadius = 10;
-    cell.dot.layer.masksToBounds = YES;
     
+    cell.dot.layer.cornerRadius = 5;
+    cell.dot.layer.masksToBounds = YES;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     return cell;
+    
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
+    if ([[device valueForKey:@"pillschedualstatus"] isEqualToString:@"delete"]) {
+        return 0;
+        
+    }
+    else{
+        NSLog(@"show");
+        return 65;
+    }
+    
+    
+    }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -268,9 +305,9 @@
               containsObject:cells.name_dose.text]) && [[mutableFetchResults valueForKey:@"datetaken"]containsObject:convertedDateString] ){
             //Alert user or handle your duplicate methods from here
             NSLog(@"exist");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!"message:@"Today already taken pill"
-        delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
-            [alert show];
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!"message:@"Today already taken pill"
+//        delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
+//            [alert show];
         }
         else
         {
@@ -301,7 +338,7 @@
         [selectedDevices setValue:convertedDateString forKeyPath:@"todaydate"];
         
         TodayTableViewCell*cell = [self.tableView cellForRowAtIndexPath:indexPaths];
-        [cell.dot setBackgroundColor:[UIColor greenColor]];
+        [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
         [cell.takentime setText:[dateFormatter stringFromDate:now]];
 
         

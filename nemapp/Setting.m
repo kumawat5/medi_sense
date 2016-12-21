@@ -8,7 +8,7 @@
 
 #import "Setting.h"
 #import <CoreData/CoreData.h>
-#import "Calender.h"
+
 #import "CKDemoViewController.h"
 
 
@@ -44,6 +44,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
+
     pillname = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -269,14 +271,17 @@
     if (indexPath.section==0) {
             if (indexPath.row == 0) {
         UITableViewCell * cell1 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell1"];
+        cell1.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell1;
         }
         else if (indexPath.row==1){
             UITableViewCell * cell2 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell2"];
+            cell2.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell2;
         }
         else if (indexPath.row==2){
             UITableViewCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
+            cell3.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell3;
         }
     
@@ -285,12 +290,13 @@
     {
      if (indexPath.row ==0) {
             UITableViewCell * cell4 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell4"];
+         cell4.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell4;
         }
         else
             if (indexPath.row==1) {
                 UITableViewCell * cell5 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell5"];
-                
+            cell5.selectionStyle = UITableViewCellSelectionStyleNone;
                 return cell5;
             }
 
@@ -299,6 +305,7 @@
     {
         if (indexPath.row==0) {
             UITableViewCell * cell6 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell6"];
+            cell6.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell6;
         
         }
@@ -307,6 +314,7 @@
     {
         if (indexPath.row==0) {
             UITableViewCell * cell7 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell7"];
+            cell7.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell7;
             
         }
@@ -314,7 +322,7 @@
     else if (indexPath.section ==4)
     {
         if (indexPath.row==0) {
-            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
 
@@ -326,7 +334,7 @@
 {
     if (indexPath.section==4) {
         if (indexPath.row==0) {
-            return 200;
+            return 387;
         }
     }
     

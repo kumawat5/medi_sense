@@ -34,21 +34,27 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Cal"];
     self.caldevice = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
 
-    UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 10, 50, 50)];
+    UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 600, 60)];
+    [navbar  setBarTintColor:[UIColor orangeColor]];
+    [navbar  setTranslucent:NO];
+    navbar.tintColor = [UIColor whiteColor];
+ 
+    
     //do something like background color, title, etc you self
     [self.view addSubview:navbar];
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"background2.png"] forBarMetrics:UIBarMetricsDefault];
-
+    
     
     UINavigationItem *item = [[UINavigationItem alloc]
                               init];
     navbar.items= @[item];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"〈 Back"
-                                   style:UIBarButtonItemStyleBordered
+                                   initWithImage:[UIImage imageNamed:@"4ByUK.png"]
+                                   style:UIBarButtonItemStylePlain
                                    target:self
                                    action:@selector(backBtnClicked:)];
+    
     item.leftBarButtonItem = backButton;
+    
     
 
     self.data = [[NSMutableDictionary alloc] init];
@@ -100,10 +106,17 @@
        
        // NSLog(@"Event: %@ , %@",combined,date1);
         releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andColor:[UIColor blueColor]];
-        
+//         CKCalendarEvent *releaseUpdatedCalendarKits = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:nil];
+//
         
         self.data[date1] = @[releaseUpdatedCalendarKit];
-    }
+        
+        }
+        //----------------------------------------------------//
+//    NSString *titles = NSLocalizedString(@"Release MBCalendarKit 2.2.4", @"");
+//    NSDate *dates = [NSDate dateWithDay:30 month:12 year:2016];
+//    CKCalendarEvent *releaseUpdatedCalendarKits = [CKCalendarEvent eventWithTitle:titles andDate:dates andInfo:nil];
+// self.data[dates] = @[releaseUpdatedCalendarKits,releaseUpdatedCalendarKit];
 
 }
 

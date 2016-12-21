@@ -19,4 +19,5 @@
 @property (strong) NSManagedObject *device;
 - (IBAction)save:(id)sender;
 
+- (IBAction)delete:(id)sender;
 @end
