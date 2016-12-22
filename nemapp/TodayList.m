@@ -15,6 +15,7 @@
     NSMutableArray *patterns;
     NSMutableArray *patternImages;
     NSMutableArray*mutable_ary;
+    NSString *TimeString;
 }
 
 @property (strong) NSMutableArray *devices;
@@ -32,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   //all notification NSLog---------
+    //NSLog(@"scheduled notifications: --%@----", [[UIApplication sharedApplication] scheduledLocalNotifications]);
     //self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -125,6 +128,10 @@
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
     }
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"H:mm"];
+    TimeString = [dateFormat stringFromDate:[NSDate date]];
+  
 
     
 }
@@ -201,22 +208,21 @@
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
     
     //Time
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"H:mm"];
-    NSString *TimeString = [dateFormat stringFromDate:[NSDate date]];
+   
     
     if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
     {
-        //NSLog(@"GREEN");
+        NSLog(@"GREEN");
          [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
     }
     else if ([[device valueForKey:@"hr24time"] floatValue]  <= [TimeString floatValue] ){
-        // NSLog(@"RED");
+        NSLog(@"data time %@",[device valueForKey:@"hr24time"]);
+         NSLog(@"RED");
           [cell.dot setBackgroundColor:[UIColor redColor]];
      }
     else
     {
-        //NSLog(@"Blue");
+        NSLog(@"Blue");
         [cell.dot setBackgroundColor:[UIColor blueColor]];
     }
     
@@ -239,7 +245,7 @@
         
     }
     else{
-        NSLog(@"show");
+       // NSLog(@"show");
         return 65;
     }
     

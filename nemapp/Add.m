@@ -18,6 +18,14 @@
     NSString*saturday;
     NSString*sunday;
     NSString *hr24time;
+    NSMutableArray*notidat;
+    int hr;
+    int min;
+    NSString *combined;
+    NSMutableArray*oldnotiday;
+    NSString*oldcombined;
+    int oldhr;
+    int oldmin;
 }
 @property (weak, nonatomic) IBOutlet UIButton *sun_btn;
 @property (weak, nonatomic) IBOutlet UIButton *mon_btn;
@@ -44,7 +52,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    oldnotiday=[[NSMutableArray alloc]init];
+    notidat = [[NSMutableArray alloc]init];
     if (self.device) {
+        oldcombined = [NSString stringWithFormat:@"%@-%@", [self.device valueForKey:@"pill"], [self.device valueForKey:@"dose"]];
+        NSArray*old = [[device valueForKey:@"hr24time"] componentsSeparatedByString:@"."];
+        oldhr = [[old objectAtIndex:0] intValue];
+        oldmin = [[old objectAtIndex:1] intValue];
+         //delete noti-----------------------------------------//
+        NSArray *arrayOfLocalNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications] ;
+        for (UILocalNotification *localNotification in arrayOfLocalNotifications) {
+            
+            if ([localNotification.alertBody isEqualToString:oldcombined]) {
+                NSLog(@"the notification this is canceld is %@", localNotification.alertBody);
+                
+                [[UIApplication sharedApplication] cancelLocalNotification:localNotification] ; // delete the notification from the system
+                
+            }
+            
+        }
+        //-------------------------------------------------//
+
+       
+
         [self.tx_pillname setText:[self.device valueForKey:@"pill"]];
         [self.tx_dose setText:[self.device valueForKey:@"dose"]];
         [self.tx_time setText:[self.device valueForKey:@"time"]];
@@ -60,7 +92,7 @@
                 self.sun_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                 _sun_btn.tintColor=[UIColor clearColor];
                 sunday = @"Sunday";
-                
+                [oldnotiday addObject:@"1"];
             }
 
 
@@ -78,6 +110,7 @@
                 self.mon_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                 _mon_btn.tintColor=[UIColor clearColor];
                 monday = @"Monday";
+                [oldnotiday addObject:@"2"];
                 
             }
         }
@@ -94,6 +127,7 @@
                 self.tue_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                 _tue_btn.tintColor=[UIColor clearColor];
                 tuesday = @"Tuesday";
+                [oldnotiday addObject:@"3"];
                 
             }
 
@@ -110,6 +144,7 @@
                self.wed_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                _wed_btn.tintColor=[UIColor clearColor];
             wednesday = @"Wednesday";
+                [oldnotiday addObject:@"4"];
             
         }
     }
@@ -125,6 +160,7 @@
                 self.th_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                 _th_btn.tintColor=[UIColor clearColor];
                 thursday = @"Thursday";
+                [oldnotiday addObject:@"5"];
                 
             }
 
@@ -142,6 +178,7 @@
                  self.fri_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                  _fri_btn.tintColor=[UIColor clearColor];
                  friday = @"Friday";
+                 [oldnotiday addObject:@"6"];
                  
              }
          }
@@ -157,10 +194,12 @@
                  self.sat_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
                  _sat_btn.tintColor=[UIColor clearColor];
                  saturday = @"Saturday";
+                 [oldnotiday addObject:@"7"];
                  
              }
 
          }
+       
         
 
     }
@@ -210,6 +249,45 @@
     [_tx_time setInputView:datePicker];
 
 }
+-(void) viewWillDisappear:(BOOL)animated
+{
+    
+    NSLog(@"nslog %@",oldcombined);
+    NSLog(@"notiday %@",oldnotiday);
+    NSLog(@"hr %d",oldhr);
+    NSLog(@"min %d",oldmin);
+    int counter=oldnotiday.count;
+    
+    for(int i=0;i<counter;i++)
+    {
+        int k =[[oldnotiday objectAtIndex:i]integerValue];
+        
+        
+        NSLog(@"array %d",k);
+        
+        
+        NSDate *now = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:now];//get the required calendar units
+        
+        
+        components.weekday = k;//Monday
+        components.hour = oldhr;
+        components.minute=oldmin;
+        NSDate *fireDate = [calendar dateFromComponents:components];
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = fireDate;
+        localNotification.alertBody = oldcombined;
+        localNotification.alertTitle =@"Please take your medication";
+        //localNotification.applicationIconBadgeNumber = 1;
+        localNotification.repeatInterval = NSCalendarUnitWeekOfYear;
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        NSLog(@"notification: %@",localNotification);
+    }
+
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -230,7 +308,10 @@
     NSDate*date = picker.date;
     [Format setDateFormat:@"H.mm"];
     hr24time = [Format stringFromDate:date];
-
+    
+     NSArray*foos = [hr24time componentsSeparatedByString:@"."];
+    hr = [[foos objectAtIndex:0] intValue];
+    min = [[foos objectAtIndex:1] intValue];
    
 }
 
@@ -246,12 +327,17 @@
             NSLog(@"selected");
              self.sun_btn.backgroundColor = [UIColor clearColor];
             sunday = @"nil";
+            [notidat removeObject:@"1"];
+           
         } else {
             [sender setSelected: YES];
              NSLog(@"deselected");
             self.sun_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _sun_btn.tintColor=[UIColor clearColor];
             sunday = @"Sunday";
+            
+            [notidat addObject:@"1"];
+           
             
         }
     }
@@ -262,12 +348,17 @@
             NSLog(@"selected");
             self.mon_btn.backgroundColor = [UIColor clearColor];
             monday = @"nil";
+            [notidat removeObject:@"2"];
+           
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.mon_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _mon_btn.tintColor=[UIColor clearColor];
             monday = @"Monday";
+            
+            [notidat addObject:@"2"];
+           
             
         }
    
@@ -280,12 +371,14 @@
             NSLog(@"selected");
             self.tue_btn.backgroundColor = [UIColor clearColor];
             tuesday = @"nil";
+             [notidat removeObject:@"3"];
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.tue_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _tue_btn.tintColor=[UIColor clearColor];
             tuesday = @"Tuesday";
+             [notidat addObject:@"3"];
             
         }
 
@@ -297,12 +390,14 @@
             NSLog(@"selected");
             self.wed_btn.backgroundColor = [UIColor clearColor];
             wednesday = @"nil";
+             [notidat removeObject:@"4"];
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.wed_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _wed_btn.tintColor=[UIColor clearColor];
             wednesday = @"Wednesday";
+             [notidat addObject:@"4"];
             
         }
     }
@@ -313,12 +408,14 @@
             NSLog(@"selected");
             self.th_btn.backgroundColor = [UIColor clearColor];
             thursday = @"nil";
+             [notidat removeObject:@"5"];
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.th_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _th_btn.tintColor=[UIColor clearColor];
             thursday = @"Thursday";
+             [notidat addObject:@"5"];
             
         }
 
@@ -330,12 +427,14 @@
             NSLog(@"selected");
             self.fri_btn.backgroundColor = [UIColor clearColor];
             friday = @"nil";
+             [notidat removeObject:@"6"];
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.fri_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _fri_btn.tintColor=[UIColor clearColor];
             friday = @"Friday";
+             [notidat addObject:@"6"];
             
         }
 
@@ -347,12 +446,14 @@
             NSLog(@"selected");
             self.sat_btn.backgroundColor = [UIColor clearColor];
             saturday = @"nil";
+             [notidat removeObject:@"7"];
         } else {
             [sender setSelected: YES];
             NSLog(@"deselected");
             self.sat_btn.backgroundColor = [UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0];
             _sat_btn.tintColor=[UIColor clearColor];
             saturday = @"Saturday";
+             [notidat addObject:@"7"];
             
         }
     }
@@ -404,6 +505,39 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+     combined = [NSString stringWithFormat:@"%@-%@", self.tx_pillname.text, self.tx_dose.text];
+   // NSLog(@"nslog %@",combined);
+    
+    int counter=notidat.count;
+    
+    for(int i=0;i<counter;i++)
+    {
+        int j =[[notidat objectAtIndex:i]integerValue];
+        
+        
+        NSLog(@"array %d",j);
+        
+        
+        NSDate *now = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:now];//get the required calendar units
+        
+        
+        components.weekday = j;//Monday
+        components.hour = hr;
+        components.minute=min;
+        NSDate *fireDate = [calendar dateFromComponents:components];
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        localNotification.fireDate = fireDate;
+        localNotification.alertBody = combined;
+        localNotification.alertTitle =@"Please take your medication";
+        //localNotification.applicationIconBadgeNumber = 1;
+        localNotification.repeatInterval = NSCalendarUnitWeekOfYear;
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        NSLog(@"notification: %@",localNotification);
+    }
+
     
    // [self dismissViewControllerAnimated:YES completion:nil];
      NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
@@ -425,6 +559,20 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+    combined = [NSString stringWithFormat:@"%@-%@", self.tx_pillname.text, self.tx_dose.text];
+    NSLog(@"nslog nslog %@",combined);
+    NSArray *arrayOfLocalNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications] ;
+    for (UILocalNotification *localNotification in arrayOfLocalNotifications) {
+        
+        if ([localNotification.alertBody isEqualToString:combined]) {
+            NSLog(@"the notification this is canceld is %@", localNotification.alertBody);
+            
+            [[UIApplication sharedApplication] cancelLocalNotification:localNotification] ; // delete the notification from the system
+            
+        }
+        
+    }
+
 
     
 }
