@@ -80,6 +80,8 @@
    // NSLog(@"event fetch %@",date);
     
     NSArray*dose= [_caldevice valueForKey:@"dose"];
+    NSArray*image= [_caldevice valueForKey:@"takenstatus"];
+   // NSLog(@"image %@",image);
     
     
     NSString *title1;
@@ -90,9 +92,7 @@
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
       dateFormatter.dateFormat = @"dd-MM-yyyy";
     
-    //imgdata = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:img]];
     
-   // UIImage* image = [[UIImage alloc] initWithData:imgdata];
   
     for (int i = 0; i < [date count]; i++){
         title1 = NSLocalizedString(title[i], @"");
@@ -100,24 +100,34 @@
         NSString *combined = [NSString stringWithFormat:@"%@ - %@", title1, title2];
         
         date1 = [dateFormatter dateFromString:date[i]];
+//        imgdata = [image[i] dataUsingEncoding:NSUTF8StringEncoding];
+//        
+//         NSLog(@"jhewrfh %@",imgdata);
        
         
         //releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil];
        
        // NSLog(@"Event: %@ , %@",combined,date1);
-        releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andColor:[UIColor blueColor]];
-//         CKCalendarEvent *releaseUpdatedCalendarKits = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:nil];
-//
+        //releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andColor:Nil];
         
-        self.data[date1] = @[releaseUpdatedCalendarKit];
+        NSData *dataImage = [[NSData alloc] init];
+        dataImage = UIImagePNGRepresentation([UIImage imageNamed:@"Screen Shot 2016-12-21 at 5.19.52 PM.png"]);
+       
         
-        }
-        //----------------------------------------------------//
-//    NSString *titles = NSLocalizedString(@"Release MBCalendarKit 2.2.4", @"");
-//    NSDate *dates = [NSDate dateWithDay:30 month:12 year:2016];
-//    CKCalendarEvent *releaseUpdatedCalendarKits = [CKCalendarEvent eventWithTitle:titles andDate:dates andInfo:nil];
-// self.data[dates] = @[releaseUpdatedCalendarKits,releaseUpdatedCalendarKit];
+        
+        releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andImage:dataImage];
 
+       
+       // self.data[date1] = @[releaseUpdatedCalendarKit];
+        if (self.data[date1]) {
+            NSMutableArray *data = [NSMutableArray arrayWithArray:self.data[date1]];
+            [data addObject:releaseUpdatedCalendarKit];
+            self.data[date1] = data;
+        } else {
+            self.data[date1] = @[releaseUpdatedCalendarKit];
+        }
+        
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

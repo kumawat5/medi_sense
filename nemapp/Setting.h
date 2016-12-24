@@ -10,6 +10,6 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Setting : UITableViewController
+@interface Setting : UITableViewController <UITextViewDelegate>
 
 @end

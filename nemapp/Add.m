@@ -7,6 +7,7 @@
 //
 
 #import "Add.h"
+#import "mg_cell.h"
 
 @interface Add ()
 {
@@ -26,6 +27,7 @@
     NSString*oldcombined;
     int oldhr;
     int oldmin;
+    NSArray*mg_ary;
 }
 @property (weak, nonatomic) IBOutlet UIButton *sun_btn;
 @property (weak, nonatomic) IBOutlet UIButton *mon_btn;
@@ -52,10 +54,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     oldnotiday=[[NSMutableArray alloc]init];
     notidat = [[NSMutableArray alloc]init];
+    //-----------------------------------------------//
+    self.mg_table.hidden=YES;
+    mg_ary= [[NSArray alloc]initWithObjects:@"mg",@"g",@"tablespoon", nil];
+    self.mg_table.layer.borderColor = [UIColor blackColor].CGColor;
+    self.mg_table.layer.borderWidth = 1;
+    self.mg_table.layer.cornerRadius = 5;
+    
+    //------------------------------------------------//
     if (self.device) {
         oldcombined = [NSString stringWithFormat:@"%@-%@", [self.device valueForKey:@"pill"], [self.device valueForKey:@"dose"]];
         NSArray*old = [[device valueForKey:@"hr24time"] componentsSeparatedByString:@"."];
@@ -78,7 +86,15 @@
        
 
         [self.tx_pillname setText:[self.device valueForKey:@"pill"]];
-        [self.tx_dose setText:[self.device valueForKey:@"dose"]];
+       // [self.tx_dose setText:[self.device valueForKey:@"dose"]];
+        NSArray*foos = [[self.device valueForKey:@"dose"] componentsSeparatedByString:@" "];
+        NSString*dose_mg = [foos objectAtIndex:0];
+        NSString*mg_mg = [foos objectAtIndex:1];
+        
+        [self.tx_dose setText:dose_mg];
+        [self.tx_mg setText:mg_mg];
+      
+        
         [self.tx_time setText:[self.device valueForKey:@"time"]];
         if ([[self.device valueForKey:@"su"] isEqualToString:@"Sunday"]) {
             if ([_sun_btn isSelected]) {
@@ -466,7 +482,8 @@
     if (self.device) {
         // Update existing device
         [self.device setValue:self.tx_pillname.text forKey:@"pill"];
-        [self.device setValue:self.tx_dose.text forKey:@"dose"];
+        NSString *combineds = [NSString stringWithFormat:@"%@ %@", self.tx_dose.text, self.tx_mg.text];
+        [self.device setValue:combineds forKey:@"dose"];
         [self.device setValue:self.tx_time.text forKey:@"time"];
          [self.device setValue:sunday forKey:@"su"];
         [self.device setValue:monday forKey:@"m"];
@@ -481,7 +498,8 @@
         // Create a new device
         NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Add" inManagedObjectContext:context];
         [newDevice setValue:self.tx_pillname.text forKey:@"pill"];
-        [newDevice setValue:self.tx_dose.text forKey:@"dose"];
+         NSString *combineded = [NSString stringWithFormat:@"%@ %@", self.tx_dose.text, self.tx_mg.text];
+        [newDevice setValue:combineded forKey:@"dose"];
         [newDevice setValue:self.tx_time.text forKey:@"time"];
         [newDevice setValue:sunday forKey:@"su"];
         [newDevice setValue:monday forKey:@"m"];
@@ -576,4 +594,46 @@
 
     
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+   
+    return [mg_ary count];
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //*******************************************************************************************************************
+    static  NSString *simpaletableidentifier=@"SimpaleTableItem";
+    mg_cell *cell = [tableView dequeueReusableCellWithIdentifier:simpaletableidentifier];
+    
+   
+        cell.mg_lbl.text=[mg_ary objectAtIndex:indexPath.row];
+   
+    return cell;
+    
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+        mg_cell *cell =[self.mg_table cellForRowAtIndexPath:indexPath];
+        //[self.mg_btn setTitle:cell.textLabel.text forState:UIControlStateNormal];
+        _tx_mg.text=cell.mg_lbl.text;
+        self.mg_table.hidden=YES;
+    
+    
+}
+
+
+
+- (IBAction)mg_action:(id)sender {
+    // pointlable.text=[NSString stringWithFormat:@"%@1",pointlable.text];
+    if (self.mg_table.hidden==YES) {
+        self.mg_table.hidden=NO;
+    }else{
+        self.mg_table.hidden=YES;
+    }
+    
+}
+
 @end

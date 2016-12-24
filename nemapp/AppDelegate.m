@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+@property (strong) NSMutableArray *devices;
 
 @end
 
@@ -16,11 +17,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //sleep(5);
+    
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    //--------------------------------------//
+
+    
+       
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"is_first_time"]) {
+        [application cancelAllLocalNotifications]; // Restart the Local Notifications list
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"is_first_time"];
+        NSLog(@"ankur %@",application);
+    }
    
     return YES;
 }

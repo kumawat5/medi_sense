@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 #import "CKDemoViewController.h"
+#import "SettingCell.h"
 
 
 @interface Setting ()
@@ -280,8 +281,11 @@
         return cell2;
         }
         else if (indexPath.row==2){
-            UITableViewCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
+            SettingCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
             cell3.selectionStyle = UITableViewCellSelectionStyleNone;
+          cell3.tx_email.tag = indexPath.row;
+            NSLog(@"ejiigje+++++ %@",cell3.tx_email.text);
+            
             return cell3;
         }
     
@@ -360,15 +364,11 @@
 
     
 }
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"UpdateDevice"]) {
-//        Calender *secondVC = (Calender* ) segue.destinationViewController;
-//        secondVC.device = [NSMutableArray arrayWithArray:self.caldevice]; // it is a good practice to initiate the property first
-//
-//        
-//    }
-//}
-
-
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    SettingCell*cell ;
+    NSIndexPath *indexPaths = [self.tableView indexPathForCell:cell];
+    NSLog(@"index %ld",(long)indexPaths.row);
+    NSLog(@"pqpqpqpqp %@",cell.tx_email.text);
+}
 @end

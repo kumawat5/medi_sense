@@ -19,6 +19,8 @@
 }
 
 @property (strong) NSMutableArray *devices;
+@property (strong) NSMutableArray *dev;
+
 @end
 
 @implementation TodayList
@@ -33,6 +35,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *valueToSave = @"2";
+    [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"preferenceName"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+    
+    /////////////
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Cal"];
+    //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(day = %@)", @"Friday"];
+    _dev = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSLog(@"%@",_dev);
+    
+//    NSManagedObject *newVehicle=[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] ;
+//     if (newVehicle) {
+//    [newVehicle setValue:@"ankurkumawat" forKey:@"takenstatus"];
+//         [self.managedObjectContext save:nil];
+//     }
+//    NSError *error = nil;
+//    // Save the object to persistent store
+//    if (![managedObjectContext save:&error]) {
+//        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+//    }
+//---------------------------------------------------------//
+//    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *sysCounters = [NSEntityDescription entityForName:@"Cal" inManagedObjectContext:managedObjectContext];
+//    [request setEntity:sysCounters];
+//    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(day == %@)", @"Friday"];
+//    
+//                              [request setPredicate:predicate];
+//                              
+//                              NSError *error = nil;
+//                              NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
+//    NSLog(@"%@",results);
+//                              for (NSManagedObject *obj in results) {
+//                                  [obj setValue:@"kumawat" forKey:@"takenstatus"];
+//                                  
+//                                  [managedObjectContext save:&error];
+//                              }
+
+    
    //all notification NSLog---------
     //NSLog(@"scheduled notifications: --%@----", [[UIApplication sharedApplication] scheduledLocalNotifications]);
     //self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
@@ -64,6 +110,8 @@
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
 //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(m = %@)", @"Monday"];
      _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
     [self.tableView reloadData];
@@ -74,6 +122,8 @@
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(tu = %@)", @"Tuesday"];
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
@@ -84,6 +134,8 @@
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(w = %@)", @"Wednesday"];
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
@@ -94,6 +146,8 @@
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(th = %@)", @"Thursday"];
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
@@ -103,9 +157,17 @@
         // Fetch the devices from persistent data store
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
+        
+
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(f = %@)", @"Friday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        //  Define how we will sort the records
+       
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+        [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
+        
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
+        
         [self.tableView reloadData];
     }
     //saturday
@@ -114,6 +176,8 @@
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(sa = %@)", @"Saturday"];
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
@@ -124,14 +188,13 @@
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
+                                          [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(su = %@)", @"Sunday"];
         _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
         [self.tableView reloadData];
     }
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"H:mm"];
-    TimeString = [dateFormat stringFromDate:[NSDate date]];
-  
+    
 
     
 }
@@ -208,18 +271,26 @@
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
     
     //Time
-   
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"H.mm"];
+        TimeString = [dateFormat stringFromDate:[NSDate date]];
+        
+
     
-    if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
+      
+        if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
     {
         NSLog(@"GREEN");
-         [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
-    }
-    else if ([[device valueForKey:@"hr24time"] floatValue]  <= [TimeString floatValue] ){
-        NSLog(@"data time %@",[device valueForKey:@"hr24time"]);
-         NSLog(@"RED");
-          [cell.dot setBackgroundColor:[UIColor redColor]];
+        [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
+       
      }
+       else if ([[device valueForKey:@"hr24time"] floatValue]  < [TimeString floatValue] )
+        {
+            NSLog(@"data time %@",[device valueForKey:@"hr24time"]);
+            NSLog(@"RED");
+            [cell.dot setBackgroundColor:[UIColor redColor]];
+        }
+
     else
     {
         NSLog(@"Blue");

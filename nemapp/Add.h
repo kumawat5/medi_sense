@@ -20,4 +20,11 @@
 - (IBAction)save:(id)sender;
 
 - (IBAction)delete:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *tx_mg;
+@property (weak, nonatomic) IBOutlet UIButton *mg_btn;
+- (IBAction)mg_action:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *mg_table;
+
+
+
 @end
