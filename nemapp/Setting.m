@@ -196,8 +196,9 @@
                 [newDevice setValue:name_name forKey:@"pill"];
                 [newDevice setValue:dose_name forKey:@"dose"];
                 [newDevice setValue:time_name forKey:@"time"];
-                
-                
+                NSData *dataImage = [[NSData alloc] init];
+                dataImage = UIImagePNGRepresentation([UIImage imageNamed:@"Screen Shot 2016-12-21 at 5.19.22 PM.png"]);
+                [newDevice setValue:dataImage forKey:@"takenstatus"];
                 
                 NSError *error = nil;
                 // Save the object to persistent store

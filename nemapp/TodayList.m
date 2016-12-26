@@ -35,53 +35,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *valueToSave = @"2";
-    [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"preferenceName"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+   
 
     
     
-    /////////////
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Cal"];
-    //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(day = %@)", @"Friday"];
-    _dev = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    NSLog(@"%@",_dev);
-    
-//    NSManagedObject *newVehicle=[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] ;
-//     if (newVehicle) {
-//    [newVehicle setValue:@"ankurkumawat" forKey:@"takenstatus"];
-//         [self.managedObjectContext save:nil];
-//     }
-//    NSError *error = nil;
-//    // Save the object to persistent store
-//    if (![managedObjectContext save:&error]) {
-//        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-//    }
-//---------------------------------------------------------//
-//    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-//    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//    NSEntityDescription *sysCounters = [NSEntityDescription entityForName:@"Cal" inManagedObjectContext:managedObjectContext];
-//    [request setEntity:sysCounters];
-//    
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(day == %@)", @"Friday"];
-//    
-//                              [request setPredicate:predicate];
-//                              
-//                              NSError *error = nil;
-//                              NSArray *results = [managedObjectContext executeFetchRequest:request error:&error];
-//    NSLog(@"%@",results);
-//                              for (NSManagedObject *obj in results) {
-//                                  [obj setValue:@"kumawat" forKey:@"takenstatus"];
-//                                  
-//                                  [managedObjectContext save:&error];
-//                              }
-
+   //---------------------------------------------------------//
     
    //all notification NSLog---------
     //NSLog(@"scheduled notifications: --%@----", [[UIApplication sharedApplication] scheduledLocalNotifications]);
-    //self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    
     self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
@@ -263,6 +225,10 @@
     [cell.dose_lbl setText:[device valueForKey:@"dose"]];
     [cell.time setText:[device valueForKey:@"time"]];
     [cell.takentime setText:[device valueForKey:@"timetakentoday"]];
+        
+        cell.dot.layer.cornerRadius = 5;
+        cell.dot.layer.masksToBounds = YES;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     
     // Date
@@ -301,9 +267,7 @@
    
    // NSLog(@"today date %@",dateString);
     
-    cell.dot.layer.cornerRadius = 5;
-    cell.dot.layer.masksToBounds = YES;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     }
     return cell;
     
@@ -400,7 +364,7 @@
             [newDevice setValue:[dateFormatter stringFromDate:now]  forKey:@"timetaken"];
             [newDevice setValue:convertedDateString  forKey:@"datetaken"];
             [newDevice setValue:[day stringFromDate:[NSDate date]]  forKey:@"day"];
-            [newDevice setValue:@"taken" forKey:@"takenstatus"];
+           // [newDevice setValue:@"taken" forKey:@"takenstatus"];
             
         }
         
@@ -413,7 +377,6 @@
         [selectedDevices setValue:[dateFormatter stringFromDate:now] forKeyPath:@"timetakentoday"];
         [selectedDevices setValue:@"taken" forKeyPath:@"todaystatus"];
         [selectedDevices setValue:convertedDateString forKeyPath:@"todaydate"];
-        
         TodayTableViewCell*cell = [self.tableView cellForRowAtIndexPath:indexPaths];
         [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
         [cell.takentime setText:[dateFormatter stringFromDate:now]];
@@ -431,7 +394,26 @@
             
         }
         
-        
+        //update cal
+        NSManagedObjectContext *managedObjectContextcal = [self managedObjectContext];
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Cal"];
+        //    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+       //  NSIndexPath *indexPathcal = [self.tableView indexPathForCell:cell];
+        TodayTableViewCell*cellcal = [self.tableView cellForRowAtIndexPath:indexPaths];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat: @ "(datetaken == %@) && (pill == %@)", convertedDateString ,cellcal.name_dose.text];
+        _dev = [managedObjectContextcal executeFetchRequest:fetchRequest error:nil];
+        for (NSManagedObject *obj in _dev) {
+            NSData *dataImage = [[NSData alloc] init];
+            dataImage = UIImagePNGRepresentation([UIImage imageNamed:@"Screen Shot 2016-12-21 at 5.18.55 PM.png"]);
+            [obj setValue:dataImage forKey:@"takenstatus"];
+            
+        }
+        NSError *error = nil;
+        // Save the object to persistent store
+        if (![managedObjectContextcal save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+
         
     }
 }

@@ -100,7 +100,7 @@
         NSString *combined = [NSString stringWithFormat:@"%@ - %@", title1, title2];
         
         date1 = [dateFormatter dateFromString:date[i]];
-//        imgdata = [image[i] dataUsingEncoding:NSUTF8StringEncoding];
+        imgdata = image[i];
 //        
 //         NSLog(@"jhewrfh %@",imgdata);
        
@@ -115,7 +115,7 @@
        
         
         
-        releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andImage:dataImage];
+        releaseUpdatedCalendarKit = [CKCalendarEvent eventWithTitle:combined andDate:date1 andInfo:Nil andImage:imgdata];
 
        
        // self.data[date1] = @[releaseUpdatedCalendarKit];

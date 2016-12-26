@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AccepteTermsAndConditions.h"
 
 @interface AppDelegate ()
 @property (strong) NSMutableArray *devices;
@@ -18,7 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //sleep(5);
+     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"AlreadyLogi"])
+    {
     
+        UINavigationController*nav = [storyBoard instantiateViewControllerWithIdentifier:@"log"];
+          self.window.rootViewController = nav;
+    }
+    else
+    {
+        
+   
+    AccepteTermsAndConditions  *loginViewController= [storyBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    self.window.rootViewController = loginViewController;
+        
+    }
+    
+    ////////////////////////////////////////////////////////
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }

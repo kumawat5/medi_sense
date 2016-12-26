@@ -17,6 +17,9 @@
 		A822BF471E0AB426005AA84B /* 4ByUK.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF461E0AB426005AA84B /* 4ByUK.png */; };
 		A8299CAF1E0BF393008B7282 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8299CAE1E0BF393008B7282 /* Images.xcassets */; };
 		A8299CB31E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A8299CB21E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png */; };
+		A82D4FBE1E10F68B00132A4E /* AccepteTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */; };
+		A82D4FC11E110D6800132A4E /* Checkbox_-_Checked-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */; };
+		A82D4FC21E110D6800132A4E /* Checkbox-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A82D4FC01E110D6800132A4E /* Checkbox-128.png */; };
 		A8334D3C1E0E6E8400F94AC5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8334D371E0E6E8400F94AC5 /* Info.plist */; };
 		A8334D3D1E0E6E8400F94AC5 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8334D391E0E6E8400F94AC5 /* MGSwipeButton.m */; };
 		A8334D3E1E0E6E8400F94AC5 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8334D3B1E0E6E8400F94AC5 /* MGSwipeTableCell.m */; };
@@ -116,6 +119,10 @@
 		A822BF461E0AB426005AA84B /* 4ByUK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4ByUK.png; sourceTree = "<group>"; };
 		A8299CAE1E0BF393008B7282 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8299CB21E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-22 at 5.01.16 PM.png"; sourceTree = "<group>"; };
+		A82D4FBC1E10F68B00132A4E /* AccepteTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccepteTermsAndConditions.h; sourceTree = "<group>"; };
+		A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccepteTermsAndConditions.m; sourceTree = "<group>"; };
+		A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Checkbox_-_Checked-128.png"; path = "MGSwipeTableCell/Checkbox_-_Checked-128.png"; sourceTree = "<group>"; };
+		A82D4FC01E110D6800132A4E /* Checkbox-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Checkbox-128.png"; path = "MGSwipeTableCell/Checkbox-128.png"; sourceTree = "<group>"; };
 		A8334D371E0E6E8400F94AC5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8334D381E0E6E8400F94AC5 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
 		A8334D391E0E6E8400F94AC5 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
@@ -428,6 +435,8 @@
 			children = (
 				A8334D361E0E6E8400F94AC5 /* MGSwipeTableCell */,
 				A84887B51E0D38A200DBB79B /* menu2.png */,
+				A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */,
+				A82D4FC01E110D6800132A4E /* Checkbox-128.png */,
 				A822BF461E0AB426005AA84B /* 4ByUK.png */,
 				A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */,
 				A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */,
@@ -466,6 +475,8 @@
 				A846FBC61E03FB2700AA98A9 /* IQKeyboardManager */,
 				A846FB821E03BAD300AA98A9 /* AppDelegate.h */,
 				A846FB831E03BAD300AA98A9 /* AppDelegate.m */,
+				A82D4FBC1E10F68B00132A4E /* AccepteTermsAndConditions.h */,
+				A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */,
 				A846FBBB1E03C63B00AA98A9 /* TodayList.h */,
 				A846FBBC1E03C63B00AA98A9 /* TodayList.m */,
 				A846FBFC1E0407F300AA98A9 /* TodayTableViewCell.h */,
@@ -738,9 +749,11 @@
 				A8299CAF1E0BF393008B7282 /* Images.xcassets in Resources */,
 				A84887B61E0D38A200DBB79B /* menu2.png in Resources */,
 				A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */,
+				A82D4FC11E110D6800132A4E /* Checkbox_-_Checked-128.png in Resources */,
 				A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */,
 				A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */,
 				A8299CB31E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png in Resources */,
+				A82D4FC21E110D6800132A4E /* Checkbox-128.png in Resources */,
 				A846FB8A1E03BAD300AA98A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -805,6 +818,7 @@
 				A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				A84887B91E0D437C00DBB79B /* mg_cell.m in Sources */,
 				A841FCDB1E0924AB007E70A0 /* NSCalendar+Juncture.m in Sources */,
+				A82D4FBE1E10F68B00132A4E /* AccepteTermsAndConditions.m in Sources */,
 				A841FCE01E0924AB007E70A0 /* NSString+Color.m in Sources */,
 				A84887BF1E0D570B00DBB79B /* SettingCell.m in Sources */,
 				A841FCD91E0924AB007E70A0 /* NSCalendar+DateComparison.m in Sources */,

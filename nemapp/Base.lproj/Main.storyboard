@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XrE-Hw-h6B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="YDC-zB-YEd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -11,12 +11,12 @@
             <objects>
                 <tableViewController id="TfM-A3-w5D" customClass="TodayList" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="R2e-8h-kd3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="4NH-Wf-aq0" customClass="TodayTableViewCell">
-                                <rect key="frame" x="0.0" y="28" width="320" height="69"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4NH-Wf-aq0" id="exc-iw-vbW">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
@@ -30,7 +30,7 @@
                                                 <constraint firstAttribute="width" constant="10" id="tWJ-ke-6aN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHT-Vj-1Jd">
@@ -39,7 +39,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="Ppu-Ln-ceg"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koA-57-1Ki">
@@ -49,7 +49,7 @@
                                                 <constraint firstAttribute="width" constant="13" id="uFH-gY-0Gu"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKn-CI-Hob">
@@ -58,7 +58,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="gbR-vT-Gt2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-Zc-TXD">
@@ -80,7 +80,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="qqe-4R-ea6"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -151,7 +151,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell1" rowHeight="42" id="9nu-qg-O7s">
-                                <rect key="frame" x="0.0" y="28" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9nu-qg-O7s" id="W9k-rA-Y83">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -179,7 +179,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell2" id="iR1-Ze-fQT">
-                                <rect key="frame" x="0.0" y="70" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="134" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iR1-Ze-fQT" id="T5x-A7-GSt">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -207,7 +207,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell3" id="Dz5-yB-NUU" customClass="SettingCell">
-                                <rect key="frame" x="0.0" y="112" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="176" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dz5-yB-NUU" id="6Eb-F0-PIS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -247,7 +247,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell4" id="kdz-gn-LWi">
-                                <rect key="frame" x="0.0" y="154" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="218" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdz-gn-LWi" id="Pw8-7z-isj">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -272,7 +272,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell5" id="eQb-1y-Vu1">
-                                <rect key="frame" x="0.0" y="196" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="260" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQb-1y-Vu1" id="NsD-V0-su7">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -294,7 +294,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell6" id="ARc-pd-54n">
-                                <rect key="frame" x="0.0" y="238" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="302" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARc-pd-54n" id="H5O-ZP-jvu">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -319,7 +319,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell7" id="fbP-er-QYJ">
-                                <rect key="frame" x="0.0" y="280" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="344" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbP-er-QYJ" id="0y3-Ui-CDh">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -344,7 +344,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="387" id="IHM-78-meP">
-                                <rect key="frame" x="0.0" y="322" width="320" height="387"/>
+                                <rect key="frame" x="0.0" y="386" width="320" height="387"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IHM-78-meP" id="e6U-3a-qys">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
@@ -578,6 +578,142 @@
             </objects>
             <point key="canvasLocation" x="895" y="466"/>
         </scene>
+        <!--Accepte Terms And Conditions-->
+        <scene sceneID="X0f-3M-l8d">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="YDC-zB-YEd" customClass="AccepteTermsAndConditions" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rth-tP-GBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3r-Yg-cjo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="530-Ts-ovd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZx-an-Sdc">
+                                <rect key="frame" x="0.0" y="517" width="320" height="51"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="CGc-A2-bSs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XrE-Hw-h6B" kind="modal" id="25u-bI-l24"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg3-cM-vWR">
+                                <rect key="frame" x="0.0" y="60" width="320" height="413"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">
+End User License Agreement - updated January 01, 2017
+
+This application (app) is licensed and not sold to you (the end user), you may use only under the terms of this license that will govern and are subject to your prior acceptance. 
+
+The use of this application is intented to be used as ad adjunt to a rational and responsible healthcare program prescribed by a professional healthcare practitioner.  This application should not replace consultation with a competent healthcare professional. The authors, developers and licensors are in no way liable for any misuse of this application.
+
+You understand no access is provided to emergency services by using this application, which also includes no 911 service. This service is to be used as a convenience to the user and user’s emergency contacts and there is no guarantee the system will work reliably due to several uncontrollable variables, which includes but is not limited to: lack of phone or Internet service, inability to acquire a GPS signal and therefore a GPS location or user controlled settings on their devices.  This application does NOT convert your iPhone or Apple Watch into a medical device nor does the app or service have FDA certification. 
+
+The licensor, the application provider, reserves all rights not expressly granted to you. The application is subject to the following:
+
+1. Scope of License: This license granted to You for the Licensed Application by Application Provider is limited to a non-transferable license to use the Licensed Application on any iOS device that You own or control and as permitted by the Usage Rules set forth in Section 9.b. of the App Store Terms and Conditions (the "Usage Rules"). This license does not allow You to use the Licensed Application on any iOS device that You do not own or control, and You may not distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense the Licensed Application. You may not copy (except as expressly permitted by this license and the Usage Rules), decompile, reverse engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Licensed Application). Any attempt to do so is a violation of the rights of the Application Provider and its licensors. If You breach this restriction, You may be subject to prosecution and damages. The terms of the license will govern any upgrades provided by Application Provider that replace and/or supplement the original Product, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.
+
+b. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.
+
+c. Termination. The license is effective until terminated by You or Application Provider. Your rights under this license will terminate automatically without notice from the Application Provider if You fail to comply with any term(s) of this license. Upon termination of the license, You shall cease all use of the Licensed Application, and destroy all copies, full or partial, of the Licensed Application.
+
+d. Services; Third Party Materials. The Licensed Application may enable access to Application Providers and third party services and web sites (collectively and individually, "Services"). Use of the Services may require Internet access and that You accept additional terms of service.
+
+You understand that by using any of the Services, You may encounter content that may be deemed offensive, indecent, or objectionable, which content may or may not be identified as having explicit language, and that the results of any search or entering of a particular URL may automatically and unintentionally generate links or references to objectionable material. Nevertheless, You agree to use the Services at Your sole risk and that the Application Provider shall not have any liability to You for content that may be found to be offensive, indecent, or objectionable.
+
+Certain Services may display, include or make available content, data, information, applications or materials from third parties ("Third Party Materials") or provide links to certain third party web sites. By using the Services, You acknowledge and agree that the Application Provider is not responsible for examining or evaluating the content, accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect of such Third Party Materials or web sites. The Application Provider does not warrant or endorse and does not assume and will not have any liability or responsibility to You or any other person for any third-party Services, Third Party Materials or web sites, or for any other materials, products, or services of third parties. Third Party Materials and links to other web sites are provided solely as a convenience to You. Financial information displayed by any Services is for general informational purposes only and is not intended to be relied upon as investment advice. Before executing any securities transaction based upon information obtained through the Services, You should consult with a financial professional. Location data provided by any Services is for basic navigational purposes only and is not intended to be relied upon in situations where precise location information is needed or where erroneous, inaccurate or incomplete location data may lead to death, personal injury, property or environmental damage. Neither the Application Provider, nor any of its content providers, guarantees the availability, accuracy, completeness, reliability, or timeliness of stock information or location data displayed by any Services.
+
+You agree that any Services contain proprietary content, information and material that is protected by applicable intellectual property and other laws, including but not limited to copyright, and that You will not use such proprietary content, information or materials in any way whatsoever except for permitted use of the Services. No portion of the Services may be reproduced in any form or by any means. You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Services, in any manner, and You shall not exploit the Services in any unauthorized way whatsoever, including but not limited to, by trespass or burdening network capacity. You further agree not to use the Services in any manner to harass, abuse, stalk, threaten, defame or otherwise infringe or violate the rights of any other party, and that the Application Provider is not in any way responsible for any such use by You, nor for any harassing, threatening, defamatory, offensive or illegal messages or transmissions that You may receive as a result of using any of the Services.
+
+In addition, third party Services and Third Party Materials that may be accessed from, displayed on or linked to from the iOS device are not available in all languages or in all countries. The Application Provider makes no representation that such Services and Materials are appropriate or available for use in any particular location. To the extent You choose to access such Services or Materials, You do so at Your own initiative and are responsible for compliance with any applicable laws, including but not limited to applicable local laws. The Application Provider, and its licensors, reserve the right to change, suspend, remove, or disable access to any Services at any time without notice. In no event will the Application Provider be liable for the removal of or disabling of access to any such Services. The Application Provider may also impose limits on the use of or access to certain Services, in any case and without notice or liability.
+
+e. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED APPLICATION IS AT YOUR SOLE RISK AND THAT THE ENTIRE RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH YOU. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED APPLICATION ("SERVICES") ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND APPLICATION PROVIDER HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. APPLICATION PROVIDER DOES NOT WARRANT AGAINST INTERFERENCE WITH YOUR ENJOYMENT OF THE LICENSED APPLICATION, THAT THE FUNCTIONS CONTAINED IN, OR SERVICES PERFORMED OR PROVIDED BY, THE LICENSED APPLICATION WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION OF THE LICENSED APPLICATION OR SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE LICENSED APPLICATION OR SERVICES WILL BE CORRECTED. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLICATION PROVIDER OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.
+
+f. Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL APPLICATION PROVIDER BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT OR OTHERWISE) AND EVEN IF APPLICATION PROVIDER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO YOU. In no event shall Application Provider’s total liability to you for all damages (other than as may be required by applicable law in cases involving personal injury) exceed the amount of five dollars ($5.00). The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.
+
+g. You may not use or otherwise export or re-export the Licensed Application except as authorized by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List. By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture or production of nuclear, missiles, or chemical or biological weapons.
+
+h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright laws of the United States.
+
+i. The laws of the State of Florida, excluding its conflicts of law rules, govern this license and your use of the Licensed Application. Your use of the Licensed Application may also be subject to other local, state, national, or international laws.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTq-LY-Xex">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TERMS AND CONDITIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-wk-3IG">
+                                        <rect key="frame" x="41" y="31" width="239" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="025-Rg-jP6"/>
+                                            <constraint firstAttribute="width" constant="239" id="Do7-Xg-J54"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XLo-wk-3IG" secondAttribute="bottom" constant="8" id="EaZ-pM-eAY"/>
+                                    <constraint firstAttribute="height" constant="60" id="WTY-BJ-Bf5"/>
+                                    <constraint firstItem="XLo-wk-3IG" firstAttribute="centerX" secondItem="yTq-LY-Xex" secondAttribute="centerX" id="tHz-XX-Lgd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TERMS AND CONDITIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-b5-xte">
+                                <rect key="frame" x="62" y="481" width="238" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgv-EP-Gi2">
+                                <rect key="frame" x="20" y="475" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="DTg-5R-JbZ"/>
+                                    <constraint firstAttribute="width" constant="34" id="U25-pb-Sxw"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Checkbox-128.png"/>
+                                <connections>
+                                    <action selector="ckeck_btn:" destination="YDC-zB-YEd" eventType="touchUpInside" id="bFB-lU-tcM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yg3-cM-vWR" firstAttribute="top" secondItem="yTq-LY-Xex" secondAttribute="bottom" id="0Hj-U4-gqb"/>
+                            <constraint firstItem="jgv-EP-Gi2" firstAttribute="top" secondItem="yg3-cM-vWR" secondAttribute="bottom" constant="2" id="1xS-Ff-ZDA"/>
+                            <constraint firstItem="ovY-b5-xte" firstAttribute="trailing" secondItem="530-Ts-ovd" secondAttribute="trailingMargin" id="35b-aQ-d3S"/>
+                            <constraint firstItem="yTq-LY-Xex" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="3Zo-mt-xhm"/>
+                            <constraint firstItem="ovY-b5-xte" firstAttribute="centerY" secondItem="jgv-EP-Gi2" secondAttribute="centerY" id="6XU-Il-9xu"/>
+                            <constraint firstItem="OZx-an-Sdc" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="7ql-10-WhD"/>
+                            <constraint firstItem="jgv-EP-Gi2" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" id="BNv-7y-k0B"/>
+                            <constraint firstItem="n3r-Yg-cjo" firstAttribute="top" secondItem="OZx-an-Sdc" secondAttribute="bottom" id="Bwd-wP-wNU"/>
+                            <constraint firstItem="ovY-b5-xte" firstAttribute="leading" secondItem="jgv-EP-Gi2" secondAttribute="trailing" constant="8" id="O6a-0R-ZZN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OZx-an-Sdc" secondAttribute="trailing" constant="-20" id="PKg-UY-T1T"/>
+                            <constraint firstItem="n3r-Yg-cjo" firstAttribute="top" secondItem="OZx-an-Sdc" secondAttribute="bottom" id="PpA-9o-fHA"/>
+                            <constraint firstItem="yTq-LY-Xex" firstAttribute="top" secondItem="530-Ts-ovd" secondAttribute="topMargin" id="Yx8-2o-GrM"/>
+                            <constraint firstItem="OZx-an-Sdc" firstAttribute="top" secondItem="jgv-EP-Gi2" secondAttribute="bottom" constant="8" id="bk7-eF-6Ih"/>
+                            <constraint firstItem="yg3-cM-vWR" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="iic-0O-jdA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yTq-LY-Xex" secondAttribute="trailing" constant="-20" id="jbs-dB-pPc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yg3-cM-vWR" secondAttribute="trailing" constant="-20" id="uRw-20-pXd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="check_box" destination="jgv-EP-Gi2" id="AAN-lJ-mhy"/>
+                        <outlet property="submit" destination="OZx-an-Sdc" id="Pcx-du-4I6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFR-jk-CH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-734" y="-389"/>
+        </scene>
         <!--Website-->
         <scene sceneID="DP4-ZA-Aaz">
             <objects>
@@ -625,7 +761,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="8Wy-8h-gbz" customClass="AllscheduleCell">
-                                <rect key="frame" x="0.0" y="28" width="320" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Wy-8h-gbz" id="dYZ-8i-15W">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
@@ -782,7 +918,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yys-xR-bGh">
             <objects>
-                <navigationController id="XrE-Hw-h6B" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="log" id="XrE-Hw-h6B" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TyM-1n-dpm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1018,7 +1154,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tablespoon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-ER-ylg">
                                                     <rect key="frame" x="0.0" y="0.0" width="96" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1161,6 +1297,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Checkbox-128.png" width="128" height="128"/>
         <image name="Screen Shot 2016-12-21 at 5.09.45 PM.png" width="347" height="63"/>
         <image name="Screen Shot 2016-12-21 at 5.14.02 PM.png" width="42" height="42"/>
         <image name="Screen Shot 2016-12-21 at 5.16.39 PM.png" width="42" height="42"/>
@@ -1170,7 +1307,7 @@
         <image name="menu2.png" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PhN-25-tqe"/>
+        <segue reference="lde-9M-WPy"/>
         <segue reference="OJI-Bd-0OQ"/>
     </inferredMetricsTieBreakers>
 </document>

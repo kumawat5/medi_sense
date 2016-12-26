@@ -24,7 +24,7 @@
         <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dose" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pill" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="takenstatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="takenstatus" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timetaken" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
