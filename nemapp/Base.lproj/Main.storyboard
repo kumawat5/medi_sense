@@ -9,14 +9,14 @@
         <!--Today's Activity-->
         <scene sceneID="qcl-wa-Czn">
             <objects>
-                <tableViewController id="TfM-A3-w5D" customClass="TodayList" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WebServiceViewController" id="TfM-A3-w5D" customClass="TodayList" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="R2e-8h-kd3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="4NH-Wf-aq0" customClass="TodayTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="320" height="69"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="4NH-Wf-aq0" customClass="MCSwipeTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4NH-Wf-aq0" id="exc-iw-vbW">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
@@ -43,7 +43,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koA-57-1Ki">
-                                            <rect key="frame" x="42" y="8" width="13" height="21"/>
+                                            <rect key="frame" x="40" y="8" width="13" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="fo6-fO-ZY4"/>
                                                 <constraint firstAttribute="width" constant="13" id="uFH-gY-0Gu"/>
@@ -70,10 +70,6 @@
                                             <color key="textColor" red="0.1843137255" green="0.36078431370000003" blue="0.019607843140000001" alpha="0.82928856380000004" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-rn-5sa">
-                                            <rect key="frame" x="23" y="66" width="297" height="2"/>
-                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-Tr-P9I">
                                             <rect key="frame" x="23" y="37" width="102" height="21"/>
                                             <constraints>
@@ -83,6 +79,10 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-rn-5sa">
+                                            <rect key="frame" x="23" y="66" width="297" height="2"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="koA-57-1Ki" firstAttribute="leading" secondItem="jHT-Vj-1Jd" secondAttribute="trailing" constant="5" id="7V7-ec-0fW"/>
@@ -151,7 +151,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell1" rowHeight="42" id="9nu-qg-O7s">
-                                <rect key="frame" x="0.0" y="92" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9nu-qg-O7s" id="W9k-rA-Y83">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -179,7 +179,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell2" id="iR1-Ze-fQT">
-                                <rect key="frame" x="0.0" y="134" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iR1-Ze-fQT" id="T5x-A7-GSt">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -207,7 +207,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell3" id="Dz5-yB-NUU" customClass="SettingCell">
-                                <rect key="frame" x="0.0" y="176" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="112" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dz5-yB-NUU" id="6Eb-F0-PIS">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
@@ -222,7 +222,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sssssssss" placeholder="myfamily@tonotify.com" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-1h-XtL">
+                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sssssssss" placeholder="myfamily@tonotify.com" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-1h-XtL">
                                             <rect key="frame" x="78" y="7" width="234" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -247,7 +247,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell4" id="kdz-gn-LWi">
-                                <rect key="frame" x="0.0" y="218" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="154" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdz-gn-LWi" id="Pw8-7z-isj">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -272,7 +272,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell5" id="eQb-1y-Vu1">
-                                <rect key="frame" x="0.0" y="260" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="196" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eQb-1y-Vu1" id="NsD-V0-su7">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -294,7 +294,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell6" id="ARc-pd-54n">
-                                <rect key="frame" x="0.0" y="302" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="238" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARc-pd-54n" id="H5O-ZP-jvu">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -319,7 +319,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CustomTableViewCell7" id="fbP-er-QYJ">
-                                <rect key="frame" x="0.0" y="344" width="320" height="42"/>
+                                <rect key="frame" x="0.0" y="280" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbP-er-QYJ" id="0y3-Ui-CDh">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="41"/>
@@ -339,12 +339,9 @@
                                         <constraint firstItem="35f-Mo-61r" firstAttribute="trailing" secondItem="0y3-Ui-CDh" secondAttribute="trailingMargin" id="va7-BD-Dhs"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="3pP-Wm-qGN" kind="push" id="MEN-Yj-vVj"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="387" id="IHM-78-meP">
-                                <rect key="frame" x="0.0" y="386" width="320" height="387"/>
+                                <rect key="frame" x="0.0" y="322" width="320" height="387"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IHM-78-meP" id="e6U-3a-qys">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
@@ -514,6 +511,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="Tdd-v9-DOK">
                         <barButtonItem key="backBarButtonItem" title="  " id="sqc-Za-FOd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Tg9-Kl-Lq3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="done:" destination="3h1-XB-NXO" id="g51-hz-fum"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="750"/>
@@ -534,42 +537,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Use this app at your own risk !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjU-pe-SRr">
-                                <rect key="frame" x="20" y="72" width="280" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="daq-vT-ORo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWv-3j-sHE">
+                                <rect key="frame" x="20" y="64" width="280" height="686"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">End User License Agreement - updated January 01, 2017
+
+This application (app) is licensed and not sold to you (the end user), you may use only under the terms of this license that will govern and are subject to your prior acceptance. 
+
+The use of this application is intented to be used as ad adjunt to a rational and responsible healthcare program prescribed by a professional healthcare practitioner.  This application should not replace consultation with a competent healthcare professional. The authors, developers and licensors are in no way liable for any misuse of this application.
+
+You understand no access is provided to emergency services by using this application, which also includes no 911 service. This service is to be used as a convenience to the user and user’s emergency contacts and there is no guarantee the system will work reliably due to several uncontrollable variables, which includes but is not limited to: lack of phone or Internet service, inability to acquire a GPS signal and therefore a GPS location or user controlled settings on their devices.  This application does NOT convert your iPhone or Apple Watch into a medical device nor does the app or service have FDA certification. 
+
+The licensor, the application provider, reserves all rights not expressly granted to you. The application is subject to the following:
+
+1. Scope of License: This license granted to You for the Licensed Application by Application Provider is limited to a non-transferable license to use the Licensed Application on any iOS device that You own or control and as permitted by the Usage Rules set forth in Section 9.b. of the App Store Terms and Conditions (the "Usage Rules"). This license does not allow You to use the Licensed Application on any iOS device that You do not own or control, and You may not distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense the Licensed Application. You may not copy (except as expressly permitted by this license and the Usage Rules), decompile, reverse engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Licensed Application). Any attempt to do so is a violation of the rights of the Application Provider and its licensors. If You breach this restriction, You may be subject to prosecution and damages. The terms of the license will govern any upgrades provided by Application Provider that replace and/or supplement the original Product, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.
+
+b. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.
+
+c. Termination. The license is effective until terminated by You or Application Provider. Your rights under this license will terminate automatically without notice from the Application Provider if You fail to comply with any term(s) of this license. Upon termination of the license, You shall cease all use of the Licensed Application, and destroy all copies, full or partial, of the Licensed Application.
+
+d. Services; Third Party Materials. The Licensed Application may enable access to Application Providers and third party services and web sites (collectively and individually, "Services"). Use of the Services may require Internet access and that You accept additional terms of service.
+
+You understand that by using any of the Services, You may encounter content that may be deemed offensive, indecent, or objectionable, which content may or may not be identified as having explicit language, and that the results of any search or entering of a particular URL may automatically and unintentionally generate links or references to objectionable material. Nevertheless, You agree to use the Services at Your sole risk and that the Application Provider shall not have any liability to You for content that may be found to be offensive, indecent, or objectionable.
+
+Certain Services may display, include or make available content, data, information, applications or materials from third parties ("Third Party Materials") or provide links to certain third party web sites. By using the Services, You acknowledge and agree that the Application Provider is not responsible for examining or evaluating the content, accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect of such Third Party Materials or web sites. The Application Provider does not warrant or endorse and does not assume and will not have any liability or responsibility to You or any other person for any third-party Services, Third Party Materials or web sites, or for any other materials, products, or services of third parties. Third Party Materials and links to other web sites are provided solely as a convenience to You. Financial information displayed by any Services is for general informational purposes only and is not intended to be relied upon as investment advice. Before executing any securities transaction based upon information obtained through the Services, You should consult with a financial professional. Location data provided by any Services is for basic navigational purposes only and is not intended to be relied upon in situations where precise location information is needed or where erroneous, inaccurate or incomplete location data may lead to death, personal injury, property or environmental damage. Neither the Application Provider, nor any of its content providers, guarantees the availability, accuracy, completeness, reliability, or timeliness of stock information or location data displayed by any Services.
+
+You agree that any Services contain proprietary content, information and material that is protected by applicable intellectual property and other laws, including but not limited to copyright, and that You will not use such proprietary content, information or materials in any way whatsoever except for permitted use of the Services. No portion of the Services may be reproduced in any form or by any means. You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Services, in any manner, and You shall not exploit the Services in any unauthorized way whatsoever, including but not limited to, by trespass or burdening network capacity. You further agree not to use the Services in any manner to harass, abuse, stalk, threaten, defame or otherwise infringe or violate the rights of any other party, and that the Application Provider is not in any way responsible for any such use by You, nor for any harassing, threatening, defamatory, offensive or illegal messages or transmissions that You may receive as a result of using any of the Services.
+
+In addition, third party Services and Third Party Materials that may be accessed from, displayed on or linked to from the iOS device are not available in all languages or in all countries. The Application Provider makes no representation that such Services and Materials are appropriate or available for use in any particular location. To the extent You choose to access such Services or Materials, You do so at Your own initiative and are responsible for compliance with any applicable laws, including but not limited to applicable local laws. The Application Provider, and its licensors, reserve the right to change, suspend, remove, or disable access to any Services at any time without notice. In no event will the Application Provider be liable for the removal of or disabling of access to any such Services. The Application Provider may also impose limits on the use of or access to certain Services, in any case and without notice or liability.
+
+e. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED APPLICATION IS AT YOUR SOLE RISK AND THAT THE ENTIRE RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH YOU. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED APPLICATION ("SERVICES") ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND APPLICATION PROVIDER HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. APPLICATION PROVIDER DOES NOT WARRANT AGAINST INTERFERENCE WITH YOUR ENJOYMENT OF THE LICENSED APPLICATION, THAT THE FUNCTIONS CONTAINED IN, OR SERVICES PERFORMED OR PROVIDED BY, THE LICENSED APPLICATION WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION OF THE LICENSED APPLICATION OR SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE LICENSED APPLICATION OR SERVICES WILL BE CORRECTED. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLICATION PROVIDER OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.
+
+f. Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL APPLICATION PROVIDER BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT OR OTHERWISE) AND EVEN IF APPLICATION PROVIDER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO YOU. In no event shall Application Provider’s total liability to you for all damages (other than as may be required by applicable law in cases involving personal injury) exceed the amount of five dollars ($5.00). The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.
+
+g. You may not use or otherwise export or re-export the Licensed Application except as authorized by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List. By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture or production of nuclear, missiles, or chemical or biological weapons.
+
+h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright laws of the United States.
+
+i. The laws of the State of Florida, excluding its conflicts of law rules, govern this license and your use of the Licensed Application. Your use of the Licensed Application may also be subject to other local, state, national, or international laws.</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsM-dJ-qta">
-                                <rect key="frame" x="20" y="101" width="280" height="136"/>
-                                <string key="text">This app was created as a personal project as I couldn't find any app that will keep reminding me to take my meds, other apps simply will only notify once, my idea is to get notifications that requiere me more action than a simple dismiss.</string>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This app should be used for entertainment only." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxp-Ng-grS">
-                                <rect key="frame" x="20" y="245" width="280" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fjU-pe-SRr" firstAttribute="leading" secondItem="B10-TI-6Kf" secondAttribute="leadingMargin" id="23C-4h-Moe"/>
-                            <constraint firstItem="NsM-dJ-qta" firstAttribute="top" secondItem="fjU-pe-SRr" secondAttribute="bottom" constant="8" id="4Md-fQ-lJD"/>
-                            <constraint firstItem="fjU-pe-SRr" firstAttribute="top" secondItem="zRR-hP-bEf" secondAttribute="bottom" constant="8" id="5hD-Us-kq7"/>
-                            <constraint firstItem="fjU-pe-SRr" firstAttribute="trailing" secondItem="B10-TI-6Kf" secondAttribute="trailingMargin" id="D49-HD-UFW"/>
-                            <constraint firstItem="Bxp-Ng-grS" firstAttribute="trailing" secondItem="B10-TI-6Kf" secondAttribute="trailingMargin" id="KXy-kH-ijV"/>
-                            <constraint firstItem="NsM-dJ-qta" firstAttribute="leading" secondItem="B10-TI-6Kf" secondAttribute="leadingMargin" id="cJt-Pr-RLd"/>
-                            <constraint firstItem="NsM-dJ-qta" firstAttribute="trailing" secondItem="B10-TI-6Kf" secondAttribute="trailingMargin" id="dfg-cp-X6L"/>
-                            <constraint firstItem="Bxp-Ng-grS" firstAttribute="top" secondItem="NsM-dJ-qta" secondAttribute="bottom" constant="8" id="eCa-6v-g9K"/>
-                            <constraint firstItem="Bxp-Ng-grS" firstAttribute="leading" secondItem="B10-TI-6Kf" secondAttribute="leadingMargin" id="mNq-Zl-lUb"/>
-                            <constraint firstItem="Bxp-Ng-grS" firstAttribute="top" secondItem="NsM-dJ-qta" secondAttribute="bottom" constant="8" id="p6b-hR-iWY"/>
-                            <constraint firstItem="NsM-dJ-qta" firstAttribute="top" secondItem="fjU-pe-SRr" secondAttribute="bottom" constant="8" id="uQC-92-xdy"/>
+                            <constraint firstItem="xWv-3j-sHE" firstAttribute="top" secondItem="zRR-hP-bEf" secondAttribute="bottom" id="406-mc-QQ3"/>
+                            <constraint firstItem="xWv-3j-sHE" firstAttribute="leading" secondItem="B10-TI-6Kf" secondAttribute="leadingMargin" id="GWD-tD-GUb"/>
+                            <constraint firstItem="xWv-3j-sHE" firstAttribute="bottom" secondItem="B10-TI-6Kf" secondAttribute="bottomMargin" id="LQj-Nh-aGB"/>
+                            <constraint firstItem="xWv-3j-sHE" firstAttribute="trailing" secondItem="B10-TI-6Kf" secondAttribute="trailingMargin" id="hQP-mX-ca2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Terms and conditions" id="jw8-NY-DJZ"/>
@@ -604,48 +620,6 @@
                                     <segue destination="XrE-Hw-h6B" kind="modal" id="25u-bI-l24"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg3-cM-vWR">
-                                <rect key="frame" x="0.0" y="60" width="320" height="413"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">
-End User License Agreement - updated January 01, 2017
-
-This application (app) is licensed and not sold to you (the end user), you may use only under the terms of this license that will govern and are subject to your prior acceptance. 
-
-The use of this application is intented to be used as ad adjunt to a rational and responsible healthcare program prescribed by a professional healthcare practitioner.  This application should not replace consultation with a competent healthcare professional. The authors, developers and licensors are in no way liable for any misuse of this application.
-
-You understand no access is provided to emergency services by using this application, which also includes no 911 service. This service is to be used as a convenience to the user and user’s emergency contacts and there is no guarantee the system will work reliably due to several uncontrollable variables, which includes but is not limited to: lack of phone or Internet service, inability to acquire a GPS signal and therefore a GPS location or user controlled settings on their devices.  This application does NOT convert your iPhone or Apple Watch into a medical device nor does the app or service have FDA certification. 
-
-The licensor, the application provider, reserves all rights not expressly granted to you. The application is subject to the following:
-
-1. Scope of License: This license granted to You for the Licensed Application by Application Provider is limited to a non-transferable license to use the Licensed Application on any iOS device that You own or control and as permitted by the Usage Rules set forth in Section 9.b. of the App Store Terms and Conditions (the "Usage Rules"). This license does not allow You to use the Licensed Application on any iOS device that You do not own or control, and You may not distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense the Licensed Application. You may not copy (except as expressly permitted by this license and the Usage Rules), decompile, reverse engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Licensed Application). Any attempt to do so is a violation of the rights of the Application Provider and its licensors. If You breach this restriction, You may be subject to prosecution and damages. The terms of the license will govern any upgrades provided by Application Provider that replace and/or supplement the original Product, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.
-
-b. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.
-
-c. Termination. The license is effective until terminated by You or Application Provider. Your rights under this license will terminate automatically without notice from the Application Provider if You fail to comply with any term(s) of this license. Upon termination of the license, You shall cease all use of the Licensed Application, and destroy all copies, full or partial, of the Licensed Application.
-
-d. Services; Third Party Materials. The Licensed Application may enable access to Application Providers and third party services and web sites (collectively and individually, "Services"). Use of the Services may require Internet access and that You accept additional terms of service.
-
-You understand that by using any of the Services, You may encounter content that may be deemed offensive, indecent, or objectionable, which content may or may not be identified as having explicit language, and that the results of any search or entering of a particular URL may automatically and unintentionally generate links or references to objectionable material. Nevertheless, You agree to use the Services at Your sole risk and that the Application Provider shall not have any liability to You for content that may be found to be offensive, indecent, or objectionable.
-
-Certain Services may display, include or make available content, data, information, applications or materials from third parties ("Third Party Materials") or provide links to certain third party web sites. By using the Services, You acknowledge and agree that the Application Provider is not responsible for examining or evaluating the content, accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect of such Third Party Materials or web sites. The Application Provider does not warrant or endorse and does not assume and will not have any liability or responsibility to You or any other person for any third-party Services, Third Party Materials or web sites, or for any other materials, products, or services of third parties. Third Party Materials and links to other web sites are provided solely as a convenience to You. Financial information displayed by any Services is for general informational purposes only and is not intended to be relied upon as investment advice. Before executing any securities transaction based upon information obtained through the Services, You should consult with a financial professional. Location data provided by any Services is for basic navigational purposes only and is not intended to be relied upon in situations where precise location information is needed or where erroneous, inaccurate or incomplete location data may lead to death, personal injury, property or environmental damage. Neither the Application Provider, nor any of its content providers, guarantees the availability, accuracy, completeness, reliability, or timeliness of stock information or location data displayed by any Services.
-
-You agree that any Services contain proprietary content, information and material that is protected by applicable intellectual property and other laws, including but not limited to copyright, and that You will not use such proprietary content, information or materials in any way whatsoever except for permitted use of the Services. No portion of the Services may be reproduced in any form or by any means. You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Services, in any manner, and You shall not exploit the Services in any unauthorized way whatsoever, including but not limited to, by trespass or burdening network capacity. You further agree not to use the Services in any manner to harass, abuse, stalk, threaten, defame or otherwise infringe or violate the rights of any other party, and that the Application Provider is not in any way responsible for any such use by You, nor for any harassing, threatening, defamatory, offensive or illegal messages or transmissions that You may receive as a result of using any of the Services.
-
-In addition, third party Services and Third Party Materials that may be accessed from, displayed on or linked to from the iOS device are not available in all languages or in all countries. The Application Provider makes no representation that such Services and Materials are appropriate or available for use in any particular location. To the extent You choose to access such Services or Materials, You do so at Your own initiative and are responsible for compliance with any applicable laws, including but not limited to applicable local laws. The Application Provider, and its licensors, reserve the right to change, suspend, remove, or disable access to any Services at any time without notice. In no event will the Application Provider be liable for the removal of or disabling of access to any such Services. The Application Provider may also impose limits on the use of or access to certain Services, in any case and without notice or liability.
-
-e. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED APPLICATION IS AT YOUR SOLE RISK AND THAT THE ENTIRE RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH YOU. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED APPLICATION ("SERVICES") ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND APPLICATION PROVIDER HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. APPLICATION PROVIDER DOES NOT WARRANT AGAINST INTERFERENCE WITH YOUR ENJOYMENT OF THE LICENSED APPLICATION, THAT THE FUNCTIONS CONTAINED IN, OR SERVICES PERFORMED OR PROVIDED BY, THE LICENSED APPLICATION WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION OF THE LICENSED APPLICATION OR SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE LICENSED APPLICATION OR SERVICES WILL BE CORRECTED. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLICATION PROVIDER OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.
-
-f. Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL APPLICATION PROVIDER BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT OR OTHERWISE) AND EVEN IF APPLICATION PROVIDER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO YOU. In no event shall Application Provider’s total liability to you for all damages (other than as may be required by applicable law in cases involving personal injury) exceed the amount of five dollars ($5.00). The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.
-
-g. You may not use or otherwise export or re-export the Licensed Application except as authorized by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List. By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture or production of nuclear, missiles, or chemical or biological weapons.
-
-h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright laws of the United States.
-
-i. The laws of the State of Florida, excluding its conflicts of law rules, govern this license and your use of the Licensed Application. Your use of the Licensed Application may also be subject to other local, state, national, or international laws.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTq-LY-Xex">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                 <subviews>
@@ -684,6 +658,49 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                     <action selector="ckeck_btn:" destination="YDC-zB-YEd" eventType="touchUpInside" id="bFB-lU-tcM"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg3-cM-vWR">
+                                <rect key="frame" x="20" y="60" width="280" height="413"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">
+End User License Agreement - updated January 01, 2017
+
+This application (app) is licensed and not sold to you (the end user), you may use only under the terms of this license that will govern and are subject to your prior acceptance. 
+
+The use of this application is intented to be used as ad adjunt to a rational and responsible healthcare program prescribed by a professional healthcare practitioner.  This application should not replace consultation with a competent healthcare professional. The authors, developers and licensors are in no way liable for any misuse of this application.
+
+You understand no access is provided to emergency services by using this application, which also includes no 911 service. This service is to be used as a convenience to the user and user’s emergency contacts and there is no guarantee the system will work reliably due to several uncontrollable variables, which includes but is not limited to: lack of phone or Internet service, inability to acquire a GPS signal and therefore a GPS location or user controlled settings on their devices.  This application does NOT convert your iPhone or Apple Watch into a medical device nor does the app or service have FDA certification. 
+
+The licensor, the application provider, reserves all rights not expressly granted to you. The application is subject to the following:
+
+1. Scope of License: This license granted to You for the Licensed Application by Application Provider is limited to a non-transferable license to use the Licensed Application on any iOS device that You own or control and as permitted by the Usage Rules set forth in Section 9.b. of the App Store Terms and Conditions (the "Usage Rules"). This license does not allow You to use the Licensed Application on any iOS device that You do not own or control, and You may not distribute or make the Licensed Application available over a network where it could be used by multiple devices at the same time. You may not rent, lease, lend, sell, redistribute or sublicense the Licensed Application. You may not copy (except as expressly permitted by this license and the Usage Rules), decompile, reverse engineer, disassemble, attempt to derive the source code of, modify, or create derivative works of the Licensed Application, any updates, or any part thereof (except as and only to the extent any foregoing restriction is prohibited by applicable law or to the extent as may be permitted by the licensing terms governing use of any open sourced components included with the Licensed Application). Any attempt to do so is a violation of the rights of the Application Provider and its licensors. If You breach this restriction, You may be subject to prosecution and damages. The terms of the license will govern any upgrades provided by Application Provider that replace and/or supplement the original Product, unless such upgrade is accompanied by a separate license in which case the terms of that license will govern.
+
+b. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates, product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.
+
+c. Termination. The license is effective until terminated by You or Application Provider. Your rights under this license will terminate automatically without notice from the Application Provider if You fail to comply with any term(s) of this license. Upon termination of the license, You shall cease all use of the Licensed Application, and destroy all copies, full or partial, of the Licensed Application.
+
+d. Services; Third Party Materials. The Licensed Application may enable access to Application Providers and third party services and web sites (collectively and individually, "Services"). Use of the Services may require Internet access and that You accept additional terms of service.
+
+You understand that by using any of the Services, You may encounter content that may be deemed offensive, indecent, or objectionable, which content may or may not be identified as having explicit language, and that the results of any search or entering of a particular URL may automatically and unintentionally generate links or references to objectionable material. Nevertheless, You agree to use the Services at Your sole risk and that the Application Provider shall not have any liability to You for content that may be found to be offensive, indecent, or objectionable.
+
+Certain Services may display, include or make available content, data, information, applications or materials from third parties ("Third Party Materials") or provide links to certain third party web sites. By using the Services, You acknowledge and agree that the Application Provider is not responsible for examining or evaluating the content, accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect of such Third Party Materials or web sites. The Application Provider does not warrant or endorse and does not assume and will not have any liability or responsibility to You or any other person for any third-party Services, Third Party Materials or web sites, or for any other materials, products, or services of third parties. Third Party Materials and links to other web sites are provided solely as a convenience to You. Financial information displayed by any Services is for general informational purposes only and is not intended to be relied upon as investment advice. Before executing any securities transaction based upon information obtained through the Services, You should consult with a financial professional. Location data provided by any Services is for basic navigational purposes only and is not intended to be relied upon in situations where precise location information is needed or where erroneous, inaccurate or incomplete location data may lead to death, personal injury, property or environmental damage. Neither the Application Provider, nor any of its content providers, guarantees the availability, accuracy, completeness, reliability, or timeliness of stock information or location data displayed by any Services.
+
+You agree that any Services contain proprietary content, information and material that is protected by applicable intellectual property and other laws, including but not limited to copyright, and that You will not use such proprietary content, information or materials in any way whatsoever except for permitted use of the Services. No portion of the Services may be reproduced in any form or by any means. You agree not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Services, in any manner, and You shall not exploit the Services in any unauthorized way whatsoever, including but not limited to, by trespass or burdening network capacity. You further agree not to use the Services in any manner to harass, abuse, stalk, threaten, defame or otherwise infringe or violate the rights of any other party, and that the Application Provider is not in any way responsible for any such use by You, nor for any harassing, threatening, defamatory, offensive or illegal messages or transmissions that You may receive as a result of using any of the Services.
+
+In addition, third party Services and Third Party Materials that may be accessed from, displayed on or linked to from the iOS device are not available in all languages or in all countries. The Application Provider makes no representation that such Services and Materials are appropriate or available for use in any particular location. To the extent You choose to access such Services or Materials, You do so at Your own initiative and are responsible for compliance with any applicable laws, including but not limited to applicable local laws. The Application Provider, and its licensors, reserve the right to change, suspend, remove, or disable access to any Services at any time without notice. In no event will the Application Provider be liable for the removal of or disabling of access to any such Services. The Application Provider may also impose limits on the use of or access to certain Services, in any case and without notice or liability.
+
+e. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE LICENSED APPLICATION IS AT YOUR SOLE RISK AND THAT THE ENTIRE RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT IS WITH YOU. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED APPLICATION ("SERVICES") ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND APPLICATION PROVIDER HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICENSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. APPLICATION PROVIDER DOES NOT WARRANT AGAINST INTERFERENCE WITH YOUR ENJOYMENT OF THE LICENSED APPLICATION, THAT THE FUNCTIONS CONTAINED IN, OR SERVICES PERFORMED OR PROVIDED BY, THE LICENSED APPLICATION WILL MEET YOUR REQUIREMENTS, THAT THE OPERATION OF THE LICENSED APPLICATION OR SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE LICENSED APPLICATION OR SERVICES WILL BE CORRECTED. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY APPLICATION PROVIDER OR ITS AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR LIMITATIONS ON APPLICABLE STATUTORY RIGHTS OF A CONSUMER, SO THE ABOVE EXCLUSION AND LIMITATIONS MAY NOT APPLY TO YOU.
+
+f. Limitation of Liability. TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL APPLICATION PROVIDER BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION OR ANY OTHER COMMERCIAL DAMAGES OR LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OR INABILITY TO USE THE LICENSED APPLICATION, HOWEVER CAUSED, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT OR OTHERWISE) AND EVEN IF APPLICATION PROVIDER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION MAY NOT APPLY TO YOU. In no event shall Application Provider’s total liability to you for all damages (other than as may be required by applicable law in cases involving personal injury) exceed the amount of five dollars ($5.00). The foregoing limitations will apply even if the above stated remedy fails of its essential purpose.
+
+g. You may not use or otherwise export or re-export the Licensed Application except as authorized by United States law and the laws of the jurisdiction in which the Licensed Application was obtained. In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List. By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list. You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture or production of nuclear, missiles, or chemical or biological weapons.
+
+h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable. Consistent with 48 C.F.R. §12.212 or 48 C.F.R. §227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are being licensed to U.S. Government end users (a) only as Commercial Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein. Unpublished-rights reserved under the copyright laws of the United States.
+
+i. The laws of the State of Florida, excluding its conflicts of law rules, govern this license and your use of the Licensed Application. Your use of the Licensed Application may also be subject to other local, state, national, or international laws.</string>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -693,16 +710,16 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                             <constraint firstItem="yTq-LY-Xex" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="3Zo-mt-xhm"/>
                             <constraint firstItem="ovY-b5-xte" firstAttribute="centerY" secondItem="jgv-EP-Gi2" secondAttribute="centerY" id="6XU-Il-9xu"/>
                             <constraint firstItem="OZx-an-Sdc" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="7ql-10-WhD"/>
+                            <constraint firstItem="yg3-cM-vWR" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" id="9Tf-h4-tim"/>
                             <constraint firstItem="jgv-EP-Gi2" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" id="BNv-7y-k0B"/>
                             <constraint firstItem="n3r-Yg-cjo" firstAttribute="top" secondItem="OZx-an-Sdc" secondAttribute="bottom" id="Bwd-wP-wNU"/>
+                            <constraint firstItem="yg3-cM-vWR" firstAttribute="trailing" secondItem="530-Ts-ovd" secondAttribute="trailingMargin" id="I89-kU-dlO"/>
                             <constraint firstItem="ovY-b5-xte" firstAttribute="leading" secondItem="jgv-EP-Gi2" secondAttribute="trailing" constant="8" id="O6a-0R-ZZN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OZx-an-Sdc" secondAttribute="trailing" constant="-20" id="PKg-UY-T1T"/>
                             <constraint firstItem="n3r-Yg-cjo" firstAttribute="top" secondItem="OZx-an-Sdc" secondAttribute="bottom" id="PpA-9o-fHA"/>
                             <constraint firstItem="yTq-LY-Xex" firstAttribute="top" secondItem="530-Ts-ovd" secondAttribute="topMargin" id="Yx8-2o-GrM"/>
                             <constraint firstItem="OZx-an-Sdc" firstAttribute="top" secondItem="jgv-EP-Gi2" secondAttribute="bottom" constant="8" id="bk7-eF-6Ih"/>
-                            <constraint firstItem="yg3-cM-vWR" firstAttribute="leading" secondItem="530-Ts-ovd" secondAttribute="leadingMargin" constant="-20" id="iic-0O-jdA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yTq-LY-Xex" secondAttribute="trailing" constant="-20" id="jbs-dB-pPc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yg3-cM-vWR" secondAttribute="trailing" constant="-20" id="uRw-20-pXd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -723,11 +740,11 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                         <viewControllerLayoutGuide type="bottom" id="nJY-T9-bPX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tbq-nh-kQF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2u-Hu-FvM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="3pP-Wm-qGN" id="NDs-Qm-r30"/>
@@ -755,40 +772,30 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
         <scene sceneID="HG3-2H-GcW">
             <objects>
                 <tableViewController id="EhS-bO-CS8" customClass="AllSchedule" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hKC-J2-nng">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" id="hKC-J2-nng">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="8Wy-8h-gbz" customClass="AllscheduleCell">
-                                <rect key="frame" x="0.0" y="92" width="320" height="65"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="67" id="8Wy-8h-gbz" customClass="AllscheduleCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Wy-8h-gbz" id="dYZ-8i-15W">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-1t-pHd">
-                                            <rect key="frame" x="8" y="22" width="20" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-1t-pHd">
+                                            <rect key="frame" x="8" y="27" width="10" height="10"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="MsP-55-Qob"/>
-                                                <constraint firstAttribute="width" constant="20" id="VY2-Cz-V2g"/>
+                                                <constraint firstAttribute="height" constant="10" id="MsP-55-Qob"/>
+                                                <constraint firstAttribute="width" constant="10" id="VY2-Cz-V2g"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1M-76-93c">
-                                            <rect key="frame" x="162" y="36" width="20" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="AyA-BT-qa5"/>
-                                                <constraint firstAttribute="height" constant="20" id="gXR-LO-BFg"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-ao-9Lv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-ao-9Lv">
                                             <rect key="frame" x="292" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="GrD-WE-Rhe"/>
@@ -798,7 +805,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYn-2r-AfX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYn-2r-AfX">
                                             <rect key="frame" x="270" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="PgW-Ci-lyI"/>
@@ -808,7 +815,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-To-wc4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-To-wc4">
                                             <rect key="frame" x="248" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Emx-tC-dlT"/>
@@ -818,7 +825,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQm-jT-aC0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQm-jT-aC0">
                                             <rect key="frame" x="226" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="1aN-2H-snm"/>
@@ -828,7 +835,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-Ul-Gxr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-Ul-Gxr">
                                             <rect key="frame" x="206" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="0kB-Mf-3t3"/>
@@ -838,7 +845,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQy-jP-7n4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQy-jP-7n4">
                                             <rect key="frame" x="184" y="36" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="Bfh-II-4Wj"/>
@@ -848,18 +855,35 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huT-S7-iej">
-                                            <rect key="frame" x="39" y="8" width="198" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huT-S7-iej">
+                                            <rect key="frame" x="26" y="8" width="286" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-aa-hYv">
-                                            <rect key="frame" x="39" y="35" width="90" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-aa-hYv">
+                                            <rect key="frame" x="26" y="35" width="90" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1M-76-93c">
+                                            <rect key="frame" x="159" y="36" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="AyA-BT-qa5"/>
+                                                <constraint firstAttribute="height" constant="20" id="gXR-LO-BFg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76u-B9-cPw">
+                                            <rect key="frame" x="26" y="64" width="294" height="2"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="SDw-C7-Jix"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="oX0-1t-pHd" firstAttribute="leading" secondItem="dYZ-8i-15W" secondAttribute="leadingMargin" id="0sy-Mo-reD"/>
@@ -868,14 +892,24 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                         <constraint firstItem="VYn-2r-AfX" firstAttribute="leading" secondItem="CCC-To-wc4" secondAttribute="trailing" constant="2" id="AIN-mZ-sTk"/>
                                         <constraint firstItem="HQy-jP-7n4" firstAttribute="leading" secondItem="C1M-76-93c" secondAttribute="trailing" constant="2" id="Gyw-WX-LhQ"/>
                                         <constraint firstItem="Ebb-Ul-Gxr" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="HGK-mi-eiL"/>
+                                        <constraint firstItem="huT-S7-iej" firstAttribute="trailing" secondItem="dYZ-8i-15W" secondAttribute="trailingMargin" id="KFK-p4-J8f"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="76u-B9-cPw" secondAttribute="trailing" constant="-8" id="SBg-vj-u4e"/>
+                                        <constraint firstItem="vuE-aa-hYv" firstAttribute="top" secondItem="huT-S7-iej" secondAttribute="bottom" constant="6" id="W1J-tQ-IaX"/>
                                         <constraint firstItem="MQm-jT-aC0" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="XeB-ts-QSW"/>
                                         <constraint firstItem="CCC-To-wc4" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="Xgh-Db-aZ0"/>
+                                        <constraint firstItem="vuE-aa-hYv" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="Z1f-eX-A2k"/>
+                                        <constraint firstItem="C1M-76-93c" firstAttribute="leading" secondItem="vuE-aa-hYv" secondAttribute="trailing" constant="46" id="ZVg-s5-jdK"/>
+                                        <constraint firstItem="huT-S7-iej" firstAttribute="top" secondItem="dYZ-8i-15W" secondAttribute="topMargin" id="aeX-75-9Em"/>
                                         <constraint firstItem="C1M-76-93c" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="c1Q-hB-ly3"/>
                                         <constraint firstItem="8kk-ao-9Lv" firstAttribute="leading" secondItem="VYn-2r-AfX" secondAttribute="trailing" constant="2" id="duS-76-ha0"/>
                                         <constraint firstItem="8kk-ao-9Lv" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="fM2-nw-Zrn"/>
                                         <constraint firstItem="oX0-1t-pHd" firstAttribute="centerY" secondItem="dYZ-8i-15W" secondAttribute="centerY" id="h87-yU-d4C"/>
+                                        <constraint firstItem="huT-S7-iej" firstAttribute="leading" secondItem="dYZ-8i-15W" secondAttribute="leadingMargin" constant="18" id="kax-RE-jhS"/>
                                         <constraint firstItem="8kk-ao-9Lv" firstAttribute="trailing" secondItem="dYZ-8i-15W" secondAttribute="trailingMargin" id="kbM-oC-SXN"/>
                                         <constraint firstItem="CCC-To-wc4" firstAttribute="leading" secondItem="MQm-jT-aC0" secondAttribute="trailing" constant="2" id="lVt-oQ-8i2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="76u-B9-cPw" secondAttribute="bottom" constant="-8" id="qhY-7R-pmy"/>
+                                        <constraint firstItem="vuE-aa-hYv" firstAttribute="leading" secondItem="dYZ-8i-15W" secondAttribute="leadingMargin" constant="18" id="r1I-zy-9BD"/>
+                                        <constraint firstItem="76u-B9-cPw" firstAttribute="leading" secondItem="dYZ-8i-15W" secondAttribute="leadingMargin" constant="18" id="rbO-J8-QHO"/>
                                         <constraint firstItem="HQy-jP-7n4" firstAttribute="bottom" secondItem="dYZ-8i-15W" secondAttribute="bottomMargin" id="y6t-cL-18n"/>
                                         <constraint firstItem="Ebb-Ul-Gxr" firstAttribute="leading" secondItem="HQy-jP-7n4" secondAttribute="trailing" constant="2" id="ySg-s7-tjT"/>
                                     </constraints>
@@ -934,7 +968,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
         <!--Add / Edit Medicine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Add" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Add" id="BYZ-38-t0r" customClass="Add" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -996,13 +1030,6 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Wy8-oi-Pnf"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-zz-44x">
-                                <rect key="frame" x="20" y="435" width="280" height="2"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="L2K-Lj-oJl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Day of the week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLX-c8-gz4">
@@ -1097,7 +1124,6 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                 </state>
                                 <connections>
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lem-E7-y0T"/>
-                                    <segue destination="TfM-A3-w5D" kind="push" id="CS6-tq-yHH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foV-RM-skj">
@@ -1119,7 +1145,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                     <segue destination="TfM-A3-w5D" kind="push" id="PhN-25-tqe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="mg" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="430-Ii-ClF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mg" placeholder="mg" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="430-Ii-ClF">
                                 <rect key="frame" x="212" y="198" width="96" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="cNW-i1-Rcw"/>
@@ -1131,17 +1157,11 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="V00-Xs-QPt"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEu-Cz-LR2">
-                                <rect key="frame" x="217" y="198" width="86" height="44"/>
-                                <connections>
-                                    <action selector="mg_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7Y-8v-90Z"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nO7-rK-Nhm">
                                 <rect key="frame" x="212" y="246" width="96" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="plT-B5-YrV"/>
+                                    <constraint firstAttribute="height" constant="80" id="plT-B5-YrV"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SimpaleTableItem" id="AjE-gc-5bz" customClass="mg_cell">
@@ -1181,6 +1201,19 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEu-Cz-LR2">
+                                <rect key="frame" x="212" y="198" width="88" height="44"/>
+                                <connections>
+                                    <action selector="mg_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7Y-8v-90Z"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-zz-44x">
+                                <rect key="frame" x="20" y="435" width="280" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="L2K-Lj-oJl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1307,7 +1340,7 @@ i. The laws of the State of Florida, excluding its conflicts of law rules, gover
         <image name="menu2.png" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lde-9M-WPy"/>
-        <segue reference="OJI-Bd-0OQ"/>
+        <segue reference="anV-BU-OkX"/>
+        <segue reference="PhN-25-tqe"/>
     </inferredMetricsTieBreakers>
 </document>

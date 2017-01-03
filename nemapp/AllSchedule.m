@@ -37,10 +37,15 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+     [self.tableView setSeparatorColor:[UIColor clearColor]];
     
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
+   
+    NSSortDescriptor * sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+   
     self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     [self.tableView reloadData];
@@ -68,13 +73,19 @@
 {
     static NSString *CellIdentifier = @"Cell";
     AllscheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
     NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
-    [cell.pill setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"pill"], [device valueForKey:@"dose"]]];
+    if ([[device valueForKey:@"pillschedualstatus"] isEqualToString:@"delete"]) {
+        //NSLog(@"not show");
+        
+    }
+    else{
+    
+
+    [cell.pill setText:[NSString stringWithFormat:@"%@ - %@", [device valueForKey:@"pill"], [device valueForKey:@"dose"]]];
     [cell.time setText:[device valueForKey:@"time"]];
-    cell.dot.layer.cornerRadius = 10;
+    cell.dot.layer.cornerRadius = 6;
     cell.dot.layer.masksToBounds = YES;
+    
     
     if ([[device valueForKey:@"sa"] isEqualToString:@"Saturday"]) {
         [cell.sat_lbl setText:@"sa"];
@@ -127,13 +138,26 @@
 //        cell.saturday.constant=0;
 //        cell.sunday.constant=0;
 //    }
+    }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 65;
+     NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
+    if ([[device valueForKey:@"pillschedualstatus"] isEqualToString:@"delete"]) {
+        return 0;
+        
+    }
+    else{
+        // NSLog(@"show");
+        return 67;
+    }
+    
+    
 }
+
+
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

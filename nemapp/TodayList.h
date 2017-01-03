@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "SWTableViewCell.h"
+//#import "SWTableViewCell.h"
 
-@interface TodayList : UITableViewController<SWTableViewCellDelegate>
-
+@interface TodayList : UITableViewController
 @end

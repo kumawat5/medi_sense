@@ -8,6 +8,7 @@
 
 #import "Add.h"
 #import "mg_cell.h"
+#import "TodayList.h"
 
 @interface Add ()
 {
@@ -58,7 +59,7 @@
     notidat = [[NSMutableArray alloc]init];
     //-----------------------------------------------//
     self.mg_table.hidden=YES;
-    mg_ary= [[NSArray alloc]initWithObjects:@"mg",@"g",@"tablespoon", nil];
+    mg_ary= [[NSArray alloc]initWithObjects:@"g",@"tablespoon", nil];
     self.mg_table.layer.borderColor = [UIColor blackColor].CGColor;
     self.mg_table.layer.borderWidth = 1;
     self.mg_table.layer.cornerRadius = 5;
@@ -282,22 +283,25 @@
         NSLog(@"array %d",k);
         
         
-        NSDate *now = [NSDate date];
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:now];//get the required calendar units
+        NSDate *nows = [NSDate date];
+        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         
-        
-        components.weekday = k;//Monday
-        components.hour = oldhr;
-        components.minute=oldmin;
-        NSDate *fireDate = [calendar dateFromComponents:components];
+        // Extract date components into components1
+        NSDateComponents *components1 = [gregorianCalendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:nows];
+        components1.weekday = k;//Monday
+        components1.hour = hr;
+        components1.minute=min;
+        NSDate *fireDates = [gregorianCalendar dateFromComponents:components1];
         
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.fireDate = fireDate;
+        localNotification.fireDate = fireDates;
         localNotification.alertBody = oldcombined;
         localNotification.alertTitle =@"Please take your medication";
-        //localNotification.applicationIconBadgeNumber = 1;
-        localNotification.repeatInterval = NSCalendarUnitWeekOfYear;
+        localNotification.soundName = @"oh-really.caf";
+        
+        localNotification.applicationIconBadgeNumber = 1;
+       // localNotification.applicationIconBadgeNumber++;
+        localNotification.repeatInterval = NSWeekCalendarUnit;
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
         NSLog(@"notification: %@",localNotification);
     }
@@ -477,6 +481,20 @@
 }
 
 - (IBAction)save:(id)sender {
+    if (![self isFormValid]) {
+        
+        return;
+        
+    }
+    
+    NSError *error;
+    
+    
+    if (!error)
+    {
+        
+
+    
     NSManagedObjectContext *context = [self managedObjectContext];
     
     if (self.device) {
@@ -523,7 +541,7 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
-     combined = [NSString stringWithFormat:@"%@-%@", self.tx_pillname.text, self.tx_dose.text];
+     combined = [NSString stringWithFormat:@"%@ - %@  %@", self.tx_pillname.text, self.tx_dose.text, self.tx_mg.text];
    // NSLog(@"nslog %@",combined);
     
     int counter=notidat.count;
@@ -536,22 +554,37 @@
         NSLog(@"array %d",j);
         
         
-        NSDate *now = [NSDate date];
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:now];//get the required calendar units
+        NSDate *nows = [NSDate date];
+        NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         
-        
-        components.weekday = j;//Monday
-        components.hour = hr;
-        components.minute=min;
-        NSDate *fireDate = [calendar dateFromComponents:components];
-        
+        // Extract date components into components1
+        NSDateComponents *components1 = [gregorianCalendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:nows];
+        components1.weekday = j;//Monday
+        components1.hour = hr;
+        components1.minute=min;
+        NSDate *fireDates = [gregorianCalendar dateFromComponents:components1];
+       
+       
+//        NSCalendar *calendar = [NSCalendar currentCalendar];
+//        NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekday fromDate:nows];//get the required calendar units
+//        
+//        
+//        components.weekday = j;//Monday
+//        components.hour = hr;
+//        components.minute=min;
+//        NSDate *fireDate = [calendar dateFromComponents:components];
+         NSLog(@"date 123456890 = %@", fireDates);
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.fireDate = fireDate;
+        localNotification.fireDate = fireDates;
+         [localNotification setTimeZone:[NSTimeZone  localTimeZone]];
         localNotification.alertBody = combined;
         localNotification.alertTitle =@"Please take your medication";
+        localNotification.soundName = @"oh-really.caf";
         //localNotification.applicationIconBadgeNumber = 1;
-        localNotification.repeatInterval = NSCalendarUnitWeekOfYear;
+       
+        
+        
+        localNotification.repeatInterval = NSWeekCalendarUnit;
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
         NSLog(@"notification: %@",localNotification);
     }
@@ -559,8 +592,47 @@
     
    // [self dismissViewControllerAnimated:YES completion:nil];
      NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
+        TodayList *wc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]
+                         instantiateViewControllerWithIdentifier:@"WebServiceViewController"];
+        [self.navigationController pushViewController:wc animated:YES];
+        
+    }
     
 }
+
+
+-(BOOL)isFormValid
+{
+    
+    NSString *emailRegEx =@"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSPredicate *emailTest =[NSPredicate predicateWithFormat:@"SELF MATCHES %@",emailRegEx];
+    
+    if (_tx_pillname.text && _tx_pillname.text.length==0)  {
+        [self showErrorMessage:@"Please enter Name of medicine"];
+        return NO;
+    }
+    else if (_tx_dose.text && _tx_dose.text.length==0)
+    {
+        [self showErrorMessage:@"Please enter Dose in mg/g/tablespoon"];
+        return NO;
+    }
+    else if (_tx_time.text && _tx_time.text.length==0)
+    {
+        [self showErrorMessage:@"Please enter Time of day"];
+        return NO;
+    }
+    return YES;
+}
+-(void)showErrorMessage:(NSString *)message
+{
+    
+    UIAlertView *alertmessage = [[UIAlertView alloc]initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
+    [alertmessage show];
+    
+}
+
 
 - (IBAction)delete:(id)sender {
     NSDate *todayDate = [NSDate date];

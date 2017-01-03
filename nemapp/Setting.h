@@ -11,5 +11,6 @@
 
 
 @interface Setting : UITableViewController <UITextViewDelegate>
+- (IBAction)done:(id)sender;
 
 @end

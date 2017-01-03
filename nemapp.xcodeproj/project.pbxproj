@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693829371E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 693829361E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m */; };
+		693829421E1A5A3C0033BEE1 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 693829411E1A5A3C0033BEE1 /* check.png */; };
+		693829441E1A5A440033BEE1 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 693829431E1A5A440033BEE1 /* cross.png */; };
 		A822BF2C1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */; };
 		A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */; };
 		A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */; };
@@ -15,14 +18,13 @@
 		A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */; };
 		A822BF3B1E0AA77B005AA84B /* Legal.m in Sources */ = {isa = PBXBuildFile; fileRef = A822BF3A1E0AA77B005AA84B /* Legal.m */; };
 		A822BF471E0AB426005AA84B /* 4ByUK.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF461E0AB426005AA84B /* 4ByUK.png */; };
+		A82807A91E14DFE900DF84CF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82807A81E14DFE900DF84CF /* AudioToolbox.framework */; };
+		A82807AB1E14E10F00DF84CF /* oh-really.caf in Resources */ = {isa = PBXBuildFile; fileRef = A82807A01E14D21100DF84CF /* oh-really.caf */; };
 		A8299CAF1E0BF393008B7282 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8299CAE1E0BF393008B7282 /* Images.xcassets */; };
 		A8299CB31E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A8299CB21E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png */; };
 		A82D4FBE1E10F68B00132A4E /* AccepteTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */; };
 		A82D4FC11E110D6800132A4E /* Checkbox_-_Checked-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */; };
 		A82D4FC21E110D6800132A4E /* Checkbox-128.png in Resources */ = {isa = PBXBuildFile; fileRef = A82D4FC01E110D6800132A4E /* Checkbox-128.png */; };
-		A8334D3C1E0E6E8400F94AC5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8334D371E0E6E8400F94AC5 /* Info.plist */; };
-		A8334D3D1E0E6E8400F94AC5 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A8334D391E0E6E8400F94AC5 /* MGSwipeButton.m */; };
-		A8334D3E1E0E6E8400F94AC5 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8334D3B1E0E6E8400F94AC5 /* MGSwipeTableCell.m */; };
 		A841FCD81E0924AB007E70A0 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA41E0924AB007E70A0 /* NSCalendar+Components.m */; };
 		A841FCD91E0924AB007E70A0 /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA61E0924AB007E70A0 /* NSCalendar+DateComparison.m */; };
 		A841FCDA1E0924AB007E70A0 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = A841FCA81E0924AB007E70A0 /* NSCalendar+DateManipulation.m */; };
@@ -70,7 +72,6 @@
 		A846FBF81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FBE81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m */; };
 		A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A846FBEA1E03FB2700AA98A9 /* IQKeyboardManager.bundle */; };
 		A846FBFB1E03FE7E00AA98A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */; };
-		A846FBFE1E0407F300AA98A9 /* TodayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FBFD1E0407F300AA98A9 /* TodayTableViewCell.m */; };
 		A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC011E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m */; };
 		A846FC0D1E0409B000AA98A9 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC031E0409B000AA98A9 /* SWCellScrollView.m */; };
 		A846FC0E1E0409B000AA98A9 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC051E0409B000AA98A9 /* SWLongPressGestureRecognizer.m */; };
@@ -108,6 +109,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		693829351E1A4CBA0033BEE1 /* MCSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSwipeTableViewCell.h; sourceTree = "<group>"; };
+		693829361E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSwipeTableViewCell.m; sourceTree = "<group>"; };
+		693829411E1A5A3C0033BEE1 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		693829431E1A5A440033BEE1 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.09.45 PM.png"; sourceTree = "<group>"; };
 		A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.14.02 PM.png"; sourceTree = "<group>"; };
 		A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.16.39 PM.png"; sourceTree = "<group>"; };
@@ -117,17 +122,15 @@
 		A822BF391E0AA77B005AA84B /* Legal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Legal.h; sourceTree = "<group>"; };
 		A822BF3A1E0AA77B005AA84B /* Legal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Legal.m; sourceTree = "<group>"; };
 		A822BF461E0AB426005AA84B /* 4ByUK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4ByUK.png; sourceTree = "<group>"; };
+		A82807A01E14D21100DF84CF /* oh-really.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "oh-really.caf"; path = "../oh-really.caf"; sourceTree = "<group>"; };
+		A82807A51E14DEAA00DF84CF /* nemapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = nemapp.entitlements; sourceTree = "<group>"; };
+		A82807A81E14DFE900DF84CF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A8299CAE1E0BF393008B7282 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8299CB21E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-22 at 5.01.16 PM.png"; sourceTree = "<group>"; };
 		A82D4FBC1E10F68B00132A4E /* AccepteTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccepteTermsAndConditions.h; sourceTree = "<group>"; };
 		A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccepteTermsAndConditions.m; sourceTree = "<group>"; };
 		A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Checkbox_-_Checked-128.png"; path = "MGSwipeTableCell/Checkbox_-_Checked-128.png"; sourceTree = "<group>"; };
 		A82D4FC01E110D6800132A4E /* Checkbox-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Checkbox-128.png"; path = "MGSwipeTableCell/Checkbox-128.png"; sourceTree = "<group>"; };
-		A8334D371E0E6E8400F94AC5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8334D381E0E6E8400F94AC5 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
-		A8334D391E0E6E8400F94AC5 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
-		A8334D3A1E0E6E8400F94AC5 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
-		A8334D3B1E0E6E8400F94AC5 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		A841FC9F1E0924AB007E70A0 /* CalendarKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarKit.h; sourceTree = "<group>"; };
 		A841FCA31E0924AB007E70A0 /* NSCalendar+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Components.h"; sourceTree = "<group>"; };
 		A841FCA41E0924AB007E70A0 /* NSCalendar+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Components.m"; sourceTree = "<group>"; };
@@ -230,8 +233,6 @@
 		A846FBE81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		A846FBEA1E03FB2700AA98A9 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A846FBFC1E0407F300AA98A9 /* TodayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayTableViewCell.h; sourceTree = "<group>"; };
-		A846FBFD1E0407F300AA98A9 /* TodayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayTableViewCell.m; sourceTree = "<group>"; };
 		A846FC001E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		A846FC011E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		A846FC021E0409B000AA98A9 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -269,6 +270,7 @@
 			files = (
 				A846FC3A1E040A9D00AA98A9 /* Foundation.framework in Frameworks */,
 				A846FC381E040A9700AA98A9 /* UIKit.framework in Frameworks */,
+				A82807A91E14DFE900DF84CF /* AudioToolbox.framework in Frameworks */,
 				A846FC361E040A9100AA98A9 /* CoreGraphics.framework in Frameworks */,
 				A846FBFB1E03FE7E00AA98A9 /* CoreData.framework in Frameworks */,
 			);
@@ -291,16 +293,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A8334D361E0E6E8400F94AC5 /* MGSwipeTableCell */ = {
+		693829341E1A4CBA0033BEE1 /* MCSwipeTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				A8334D371E0E6E8400F94AC5 /* Info.plist */,
-				A8334D381E0E6E8400F94AC5 /* MGSwipeButton.h */,
-				A8334D391E0E6E8400F94AC5 /* MGSwipeButton.m */,
-				A8334D3A1E0E6E8400F94AC5 /* MGSwipeTableCell.h */,
-				A8334D3B1E0E6E8400F94AC5 /* MGSwipeTableCell.m */,
+				693829351E1A4CBA0033BEE1 /* MCSwipeTableViewCell.h */,
+				693829361E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m */,
 			);
-			path = MGSwipeTableCell;
+			path = MCSwipeTableViewCell;
 			sourceTree = "<group>";
 		};
 		A841FC9E1E0924AB007E70A0 /* CalendarKit */ = {
@@ -433,8 +432,11 @@
 		A846FB731E03BAD300AA98A9 = {
 			isa = PBXGroup;
 			children = (
-				A8334D361E0E6E8400F94AC5 /* MGSwipeTableCell */,
+				693829341E1A4CBA0033BEE1 /* MCSwipeTableViewCell */,
+				A82807A81E14DFE900DF84CF /* AudioToolbox.framework */,
 				A84887B51E0D38A200DBB79B /* menu2.png */,
+				693829431E1A5A440033BEE1 /* cross.png */,
+				693829411E1A5A3C0033BEE1 /* check.png */,
 				A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */,
 				A82D4FC01E110D6800132A4E /* Checkbox-128.png */,
 				A822BF461E0AB426005AA84B /* 4ByUK.png */,
@@ -470,6 +472,7 @@
 		A846FB7E1E03BAD300AA98A9 /* nemapp */ = {
 			isa = PBXGroup;
 			children = (
+				A82807A51E14DEAA00DF84CF /* nemapp.entitlements */,
 				A841FC9E1E0924AB007E70A0 /* CalendarKit */,
 				A846FBFF1E0409B000AA98A9 /* SWTableViewCell */,
 				A846FBC61E03FB2700AA98A9 /* IQKeyboardManager */,
@@ -479,8 +482,6 @@
 				A82D4FBD1E10F68B00132A4E /* AccepteTermsAndConditions.m */,
 				A846FBBB1E03C63B00AA98A9 /* TodayList.h */,
 				A846FBBC1E03C63B00AA98A9 /* TodayList.m */,
-				A846FBFC1E0407F300AA98A9 /* TodayTableViewCell.h */,
-				A846FBFD1E0407F300AA98A9 /* TodayTableViewCell.m */,
 				A846FBB51E03BFE000AA98A9 /* Add.h */,
 				A846FBB61E03BFE000AA98A9 /* Add.m */,
 				A84887B71E0D437C00DBB79B /* mg_cell.h */,
@@ -514,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				A846FB801E03BAD300AA98A9 /* main.m */,
+				A82807A01E14D21100DF84CF /* oh-really.caf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -701,6 +703,14 @@
 					A846FB7B1E03BAD300AA98A9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EU7E6J5A6W;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A846FB971E03BAD300AA98A9 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -737,7 +747,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8334D3C1E0E6E8400F94AC5 /* Info.plist in Resources */,
 				A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */,
 				A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */,
 				A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */,
@@ -748,12 +757,15 @@
 				A846FC421E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png in Resources */,
 				A8299CAF1E0BF393008B7282 /* Images.xcassets in Resources */,
 				A84887B61E0D38A200DBB79B /* menu2.png in Resources */,
+				693829441E1A5A440033BEE1 /* cross.png in Resources */,
+				693829421E1A5A3C0033BEE1 /* check.png in Resources */,
 				A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */,
 				A82D4FC11E110D6800132A4E /* Checkbox_-_Checked-128.png in Resources */,
 				A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */,
 				A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */,
 				A8299CB31E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png in Resources */,
 				A82D4FC21E110D6800132A4E /* Checkbox-128.png in Resources */,
+				A82807AB1E14E10F00DF84CF /* oh-really.caf in Resources */,
 				A846FB8A1E03BAD300AA98A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,7 +793,6 @@
 			files = (
 				A841FCF11E093C3D007E70A0 /* CKDemoViewController.m in Sources */,
 				A841FCDE1E0924AB007E70A0 /* NSDate+Description.m in Sources */,
-				A8334D3D1E0E6E8400F94AC5 /* MGSwipeButton.m in Sources */,
 				A846FB8D1E03BAD300AA98A9 /* nemapp.xcdatamodeld in Sources */,
 				A846FBF21E03FB2700AA98A9 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A841FCDD1E0924AB007E70A0 /* NSDate+Components.m in Sources */,
@@ -796,11 +807,9 @@
 				A841FCE91E0924AB007E70A0 /* MBPolygonView.m in Sources */,
 				A846FC101E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				A846FBF41E03FB2700AA98A9 /* IQBarButtonItem.m in Sources */,
-				A8334D3E1E0E6E8400F94AC5 /* MGSwipeTableCell.m in Sources */,
 				A841FCDF1E0924AB007E70A0 /* NSDateComponents+AllComponents.m in Sources */,
 				A846FBC31E03CEE500AA98A9 /* Setting.m in Sources */,
 				A846FBEE1E03FB2700AA98A9 /* IQUIView+Hierarchy.m in Sources */,
-				A846FBFE1E0407F300AA98A9 /* TodayTableViewCell.m in Sources */,
 				A841FCDA1E0924AB007E70A0 /* NSCalendar+DateManipulation.m in Sources */,
 				A841FCE41E0924AB007E70A0 /* CKCalendarCell.m in Sources */,
 				A841FCEB1E0924AB007E70A0 /* CKCalendarViewControllerInternal.m in Sources */,
@@ -817,6 +826,7 @@
 				A841FCE61E0924AB007E70A0 /* CKCalendarHeaderView.m in Sources */,
 				A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				A84887B91E0D437C00DBB79B /* mg_cell.m in Sources */,
+				693829371E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m in Sources */,
 				A841FCDB1E0924AB007E70A0 /* NSCalendar+Juncture.m in Sources */,
 				A82D4FBE1E10F68B00132A4E /* AccepteTermsAndConditions.m in Sources */,
 				A841FCE01E0924AB007E70A0 /* NSString+Color.m in Sources */,
@@ -973,11 +983,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ces ruiz (5UHP48TG33)";
+				CODE_SIGN_ENTITLEMENTS = nemapp/nemapp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nemapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.Nemapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -986,11 +998,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ces ruiz (5UHP48TG33)";
+				CODE_SIGN_ENTITLEMENTS = nemapp/nemapp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nemapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.Nemapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
