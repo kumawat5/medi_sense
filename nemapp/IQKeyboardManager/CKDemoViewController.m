@@ -36,7 +36,7 @@
     self.caldevice = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
 
     UINavigationBar *navbar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 600, 60)];
-    [navbar  setBarTintColor:[UIColor orangeColor]];
+    [navbar  setBarTintColor:[UIColor blueColor]];
     [navbar  setTranslucent:NO];
     navbar.tintColor = [UIColor whiteColor];
  

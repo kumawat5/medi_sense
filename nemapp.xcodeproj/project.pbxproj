@@ -11,8 +11,6 @@
 		693829421E1A5A3C0033BEE1 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 693829411E1A5A3C0033BEE1 /* check.png */; };
 		693829441E1A5A440033BEE1 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 693829431E1A5A440033BEE1 /* cross.png */; };
 		A822BF2C1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */; };
-		A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */; };
-		A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */; };
 		A822BF361E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */; };
 		A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */; };
 		A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */; };
@@ -72,21 +70,17 @@
 		A846FBF81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FBE81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m */; };
 		A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A846FBEA1E03FB2700AA98A9 /* IQKeyboardManager.bundle */; };
 		A846FBFB1E03FE7E00AA98A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */; };
-		A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC011E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m */; };
-		A846FC0D1E0409B000AA98A9 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC031E0409B000AA98A9 /* SWCellScrollView.m */; };
-		A846FC0E1E0409B000AA98A9 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC051E0409B000AA98A9 /* SWLongPressGestureRecognizer.m */; };
-		A846FC0F1E0409B000AA98A9 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC071E0409B000AA98A9 /* SWTableViewCell.m */; };
-		A846FC101E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC091E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m */; };
-		A846FC111E0409B000AA98A9 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A846FC0B1E0409B000AA98A9 /* SWUtilityButtonView.m */; };
 		A846FC361E040A9100AA98A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FC351E040A9100AA98A9 /* CoreGraphics.framework */; };
 		A846FC381E040A9700AA98A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FC371E040A9700AA98A9 /* UIKit.framework */; };
 		A846FC3A1E040A9D00AA98A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A846FC391E040A9D00AA98A9 /* Foundation.framework */; };
-		A846FC411E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */; };
-		A846FC421E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */; };
 		A84887B61E0D38A200DBB79B /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = A84887B51E0D38A200DBB79B /* menu2.png */; };
 		A84887B91E0D437C00DBB79B /* mg_cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A84887B81E0D437C00DBB79B /* mg_cell.m */; };
 		A84887BC1E0D4D5300DBB79B /* Website.m in Sources */ = {isa = PBXBuildFile; fileRef = A84887BB1E0D4D5300DBB79B /* Website.m */; };
 		A84887BF1E0D570B00DBB79B /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A84887BE1E0D570B00DBB79B /* SettingCell.m */; };
+		A84C902E1EA09DAD0078F6C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84C902D1EA09DAD0078F6C4 /* Launch Screen.storyboard */; };
+		A84C90301EA09DF10078F6C4 /* 4444.png in Resources */ = {isa = PBXBuildFile; fileRef = A84C902F1EA09DF10078F6C4 /* 4444.png */; };
+		A84C90321EA09FF30078F6C4 /* Screen Shot 2017-04-14 at 11.40.39 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = A84C90311EA09FF30078F6C4 /* Screen Shot 2017-04-14 at 11.40.39 AM.png */; };
+		A84C90341EA09FFC0078F6C4 /* Screen Shot 2017-04-14 at 11.40.25 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = A84C90331EA09FFC0078F6C4 /* Screen Shot 2017-04-14 at 11.40.25 AM.png */; };
 		A8523A861E050E0A00AD1C5B /* AllSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A8523A851E050E0A00AD1C5B /* AllSchedule.m */; };
 		A8523A891E050E2400AD1C5B /* AllscheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8523A881E050E2400AD1C5B /* AllscheduleCell.m */; };
 /* End PBXBuildFile section */
@@ -114,8 +108,6 @@
 		693829411E1A5A3C0033BEE1 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		693829431E1A5A440033BEE1 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.09.45 PM.png"; sourceTree = "<group>"; };
-		A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.14.02 PM.png"; sourceTree = "<group>"; };
-		A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.16.39 PM.png"; sourceTree = "<group>"; };
 		A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.18.55 PM.png"; sourceTree = "<group>"; };
 		A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.19.22 PM.png"; sourceTree = "<group>"; };
 		A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2016-12-21 at 5.19.52 PM.png"; sourceTree = "<group>"; };
@@ -233,23 +225,9 @@
 		A846FBE81E03FB2700AA98A9 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		A846FBEA1E03FB2700AA98A9 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A846FC001E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
-		A846FC011E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
-		A846FC021E0409B000AA98A9 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
-		A846FC031E0409B000AA98A9 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
-		A846FC041E0409B000AA98A9 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
-		A846FC051E0409B000AA98A9 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
-		A846FC061E0409B000AA98A9 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
-		A846FC071E0409B000AA98A9 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
-		A846FC081E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
-		A846FC091E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
-		A846FC0A1E0409B000AA98A9 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
-		A846FC0B1E0409B000AA98A9 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
 		A846FC351E040A9100AA98A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A846FC371E040A9700AA98A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A846FC391E040A9D00AA98A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-12-16 at 5.16.10 PM.png"; path = "images/Screen Shot 2016-12-16 at 5.16.10 PM.png"; sourceTree = "<group>"; };
-		A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-12-16 at 5.16.34 PM.png"; path = "images/Screen Shot 2016-12-16 at 5.16.34 PM.png"; sourceTree = "<group>"; };
 		A84887B51E0D38A200DBB79B /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		A84887B71E0D437C00DBB79B /* mg_cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mg_cell.h; sourceTree = "<group>"; };
 		A84887B81E0D437C00DBB79B /* mg_cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mg_cell.m; sourceTree = "<group>"; };
@@ -257,6 +235,10 @@
 		A84887BB1E0D4D5300DBB79B /* Website.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Website.m; sourceTree = "<group>"; };
 		A84887BD1E0D570B00DBB79B /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		A84887BE1E0D570B00DBB79B /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		A84C902D1EA09DAD0078F6C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A84C902F1EA09DF10078F6C4 /* 4444.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4444.png; sourceTree = "<group>"; };
+		A84C90311EA09FF30078F6C4 /* Screen Shot 2017-04-14 at 11.40.39 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-04-14 at 11.40.39 AM.png"; sourceTree = "<group>"; };
+		A84C90331EA09FFC0078F6C4 /* Screen Shot 2017-04-14 at 11.40.25 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-04-14 at 11.40.25 AM.png"; sourceTree = "<group>"; };
 		A8523A841E050E0A00AD1C5B /* AllSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSchedule.h; sourceTree = "<group>"; };
 		A8523A851E050E0A00AD1C5B /* AllSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSchedule.m; sourceTree = "<group>"; };
 		A8523A871E050E2400AD1C5B /* AllscheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllscheduleCell.h; sourceTree = "<group>"; };
@@ -432,26 +414,9 @@
 		A846FB731E03BAD300AA98A9 = {
 			isa = PBXGroup;
 			children = (
-				693829341E1A4CBA0033BEE1 /* MCSwipeTableViewCell */,
-				A82807A81E14DFE900DF84CF /* AudioToolbox.framework */,
-				A84887B51E0D38A200DBB79B /* menu2.png */,
-				693829431E1A5A440033BEE1 /* cross.png */,
-				693829411E1A5A3C0033BEE1 /* check.png */,
-				A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */,
-				A82D4FC01E110D6800132A4E /* Checkbox-128.png */,
-				A822BF461E0AB426005AA84B /* 4ByUK.png */,
-				A846FC3F1E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png */,
-				A846FC401E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png */,
-				A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */,
-				A822BF2E1E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png */,
-				A822BF311E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png */,
-				A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */,
-				A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */,
-				A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */,
-				A846FC391E040A9D00AA98A9 /* Foundation.framework */,
-				A846FC371E040A9700AA98A9 /* UIKit.framework */,
-				A846FC351E040A9100AA98A9 /* CoreGraphics.framework */,
-				A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */,
+				A84C902F1EA09DF10078F6C4 /* 4444.png */,
+				A84A60D41E557F1000ADEAA8 /* Framework */,
+				A84A60D51E557F5F00ADEAA8 /* images */,
 				A846FB7E1E03BAD300AA98A9 /* nemapp */,
 				A846FB9B1E03BAD300AA98A9 /* nemappTests */,
 				A846FBA61E03BAD300AA98A9 /* nemappUITests */,
@@ -474,7 +439,6 @@
 			children = (
 				A82807A51E14DEAA00DF84CF /* nemapp.entitlements */,
 				A841FC9E1E0924AB007E70A0 /* CalendarKit */,
-				A846FBFF1E0409B000AA98A9 /* SWTableViewCell */,
 				A846FBC61E03FB2700AA98A9 /* IQKeyboardManager */,
 				A846FB821E03BAD300AA98A9 /* AppDelegate.h */,
 				A846FB831E03BAD300AA98A9 /* AppDelegate.m */,
@@ -501,6 +465,7 @@
 				A84887BA1E0D4D5300DBB79B /* Website.h */,
 				A84887BB1E0D4D5300DBB79B /* Website.m */,
 				A846FB881E03BAD300AA98A9 /* Main.storyboard */,
+				A84C902D1EA09DAD0078F6C4 /* Launch Screen.storyboard */,
 				A846FB8E1E03BAD300AA98A9 /* Assets.xcassets */,
 				A8299CB21E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png */,
 				A846FB931E03BAD300AA98A9 /* Info.plist */,
@@ -616,23 +581,36 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A846FBFF1E0409B000AA98A9 /* SWTableViewCell */ = {
+		A84A60D41E557F1000ADEAA8 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A846FC001E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.h */,
-				A846FC011E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m */,
-				A846FC021E0409B000AA98A9 /* SWCellScrollView.h */,
-				A846FC031E0409B000AA98A9 /* SWCellScrollView.m */,
-				A846FC041E0409B000AA98A9 /* SWLongPressGestureRecognizer.h */,
-				A846FC051E0409B000AA98A9 /* SWLongPressGestureRecognizer.m */,
-				A846FC061E0409B000AA98A9 /* SWTableViewCell.h */,
-				A846FC071E0409B000AA98A9 /* SWTableViewCell.m */,
-				A846FC081E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.h */,
-				A846FC091E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m */,
-				A846FC0A1E0409B000AA98A9 /* SWUtilityButtonView.h */,
-				A846FC0B1E0409B000AA98A9 /* SWUtilityButtonView.m */,
+				A82807A81E14DFE900DF84CF /* AudioToolbox.framework */,
+				A846FC391E040A9D00AA98A9 /* Foundation.framework */,
+				A846FC371E040A9700AA98A9 /* UIKit.framework */,
+				A846FC351E040A9100AA98A9 /* CoreGraphics.framework */,
+				A846FBFA1E03FE7E00AA98A9 /* CoreData.framework */,
+				693829341E1A4CBA0033BEE1 /* MCSwipeTableViewCell */,
 			);
-			path = SWTableViewCell;
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A84A60D51E557F5F00ADEAA8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A84887B51E0D38A200DBB79B /* menu2.png */,
+				693829431E1A5A440033BEE1 /* cross.png */,
+				693829411E1A5A3C0033BEE1 /* check.png */,
+				A82D4FBF1E110D6800132A4E /* Checkbox_-_Checked-128.png */,
+				A82D4FC01E110D6800132A4E /* Checkbox-128.png */,
+				A822BF461E0AB426005AA84B /* 4ByUK.png */,
+				A822BF2B1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png */,
+				A822BF331E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png */,
+				A822BF341E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png */,
+				A822BF351E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png */,
+				A84C90311EA09FF30078F6C4 /* Screen Shot 2017-04-14 at 11.40.39 AM.png */,
+				A84C90331EA09FFC0078F6C4 /* Screen Shot 2017-04-14 at 11.40.25 AM.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,7 +675,7 @@
 		A846FB741E03BAD300AA98A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Sixthsense;
 				TargetAttributes = {
 					A846FB7B1E03BAD300AA98A9 = {
@@ -747,22 +725,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A822BF321E0AA33A005AA84B /* Screen Shot 2016-12-21 at 5.16.39 PM.png in Resources */,
-				A822BF301E0AA2B6005AA84B /* Screen Shot 2016-12-21 at 5.14.02 PM.png in Resources */,
 				A822BF381E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.52 PM.png in Resources */,
 				A822BF2C1E0AA198005AA84B /* Screen Shot 2016-12-21 at 5.09.45 PM.png in Resources */,
 				A822BF471E0AB426005AA84B /* 4ByUK.png in Resources */,
-				A846FC411E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.10 PM.png in Resources */,
 				A822BF361E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.18.55 PM.png in Resources */,
-				A846FC421E040D0800AA98A9 /* Screen Shot 2016-12-16 at 5.16.34 PM.png in Resources */,
 				A8299CAF1E0BF393008B7282 /* Images.xcassets in Resources */,
+				A84C90321EA09FF30078F6C4 /* Screen Shot 2017-04-14 at 11.40.39 AM.png in Resources */,
+				A84C90301EA09DF10078F6C4 /* 4444.png in Resources */,
 				A84887B61E0D38A200DBB79B /* menu2.png in Resources */,
+				A84C902E1EA09DAD0078F6C4 /* Launch Screen.storyboard in Resources */,
 				693829441E1A5A440033BEE1 /* cross.png in Resources */,
 				693829421E1A5A3C0033BEE1 /* check.png in Resources */,
 				A822BF371E0AA404005AA84B /* Screen Shot 2016-12-21 at 5.19.22 PM.png in Resources */,
 				A82D4FC11E110D6800132A4E /* Checkbox_-_Checked-128.png in Resources */,
 				A846FB8F1E03BAD300AA98A9 /* Assets.xcassets in Resources */,
 				A846FBF91E03FB2700AA98A9 /* IQKeyboardManager.bundle in Resources */,
+				A84C90341EA09FFC0078F6C4 /* Screen Shot 2017-04-14 at 11.40.25 AM.png in Resources */,
 				A8299CB31E0BF723008B7282 /* Screen Shot 2016-12-22 at 5.01.16 PM.png in Resources */,
 				A82D4FC21E110D6800132A4E /* Checkbox-128.png in Resources */,
 				A82807AB1E14E10F00DF84CF /* oh-really.caf in Resources */,
@@ -805,7 +783,6 @@
 				A841FCE11E0924AB007E70A0 /* UIColor+HexString.m in Sources */,
 				A822BF3B1E0AA77B005AA84B /* Legal.m in Sources */,
 				A841FCE91E0924AB007E70A0 /* MBPolygonView.m in Sources */,
-				A846FC101E0409B000AA98A9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				A846FBF41E03FB2700AA98A9 /* IQBarButtonItem.m in Sources */,
 				A841FCDF1E0924AB007E70A0 /* NSDateComponents+AllComponents.m in Sources */,
 				A846FBC31E03CEE500AA98A9 /* Setting.m in Sources */,
@@ -821,10 +798,8 @@
 				A841FCEA1E0924AB007E70A0 /* CKCalendarViewController.m in Sources */,
 				A841FCE81E0924AB007E70A0 /* CKTableViewCell.m in Sources */,
 				A841FCD81E0924AB007E70A0 /* NSCalendar+Components.m in Sources */,
-				A846FC0D1E0409B000AA98A9 /* SWCellScrollView.m in Sources */,
 				A846FBED1E03FB2700AA98A9 /* IQUITextFieldView+Additions.m in Sources */,
 				A841FCE61E0924AB007E70A0 /* CKCalendarHeaderView.m in Sources */,
-				A846FC0C1E0409B000AA98A9 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				A84887B91E0D437C00DBB79B /* mg_cell.m in Sources */,
 				693829371E1A4CBA0033BEE1 /* MCSwipeTableViewCell.m in Sources */,
 				A841FCDB1E0924AB007E70A0 /* NSCalendar+Juncture.m in Sources */,
@@ -838,13 +813,10 @@
 				A841FCE21E0924AB007E70A0 /* UIView+AnimatedFrame.m in Sources */,
 				A846FBBD1E03C63B00AA98A9 /* TodayList.m in Sources */,
 				A846FBF31E03FB2700AA98A9 /* IQTextView.m in Sources */,
-				A846FC111E0409B000AA98A9 /* SWUtilityButtonView.m in Sources */,
 				A841FCDC1E0924AB007E70A0 /* NSCalendar+Ranges.m in Sources */,
-				A846FC0F1E0409B000AA98A9 /* SWTableViewCell.m in Sources */,
 				A846FB811E03BAD300AA98A9 /* main.m in Sources */,
 				A846FBF51E03FB2700AA98A9 /* IQPreviousNextView.m in Sources */,
 				A841FCE51E0924AB007E70A0 /* CKCalendarEvent.m in Sources */,
-				A846FC0E1E0409B000AA98A9 /* SWLongPressGestureRecognizer.m in Sources */,
 				A84887BC1E0D4D5300DBB79B /* Website.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,8 +878,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ces ruiz (5UHP48TG33)";
@@ -952,8 +926,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ces ruiz (5UHP48TG33)";
@@ -982,10 +958,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = nemapp/nemapp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nemapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.Nemapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -997,10 +973,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = nemapp/nemapp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = nemapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixthsense.Nemapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

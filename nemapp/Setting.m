@@ -226,18 +226,16 @@
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section==0) {
-        return 3;
+        return 2;
     }
     else if(section==1){
-        return 2;}
-    else if(section==2){
         return 1;}
-    else if(section==3){
+    else if(section==2){
         return 1;}
     else
         return 1;
@@ -257,9 +255,6 @@
     else if(section==2){
         headerTitle =@"  ";
     }
-    else if(section==3){
-        headerTitle =@"  ";
-    }
     else
     {
         headerTitle =@"  ";
@@ -272,29 +267,29 @@
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell"];
   
-    if (indexPath.section==0) {
-            if (indexPath.row == 0) {
-        UITableViewCell * cell1 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell1"];
-        cell1.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell1;
-        }
-        else if (indexPath.row==1){
-            UITableViewCell * cell2 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell2"];
-            cell2.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell2;
-        }
-        else if (indexPath.row==2){
-            SettingCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
-            cell3.selectionStyle = UITableViewCellSelectionStyleNone;
-            cell3.tx_email.text = [[NSUserDefaults standardUserDefaults]
-                                   stringForKey:@"preferenceName"];
-            cell3.tx_email.tag = 1;
-            
-            return cell3;
-        }
+//    if (indexPath.section==0) {
+//            if (indexPath.row == 0) {
+//        UITableViewCell * cell1 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell1"];
+//        cell1.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell1;
+//        }
+//        else if (indexPath.row==1){
+//            UITableViewCell * cell2 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell2"];
+//            cell2.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell2;
+//        }
+//        else if (indexPath.row==2){
+//            SettingCell * cell3 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell3"];
+//            cell3.selectionStyle = UITableViewCellSelectionStyleNone;
+//            cell3.tx_email.text = [[NSUserDefaults standardUserDefaults]
+//                                   stringForKey:@"preferenceName"];
+//            cell3.tx_email.tag = 1;
+//            
+//            return cell3;
+//        }
     
-    }
-    else if (indexPath.section==1)
+//    }
+    if (indexPath.section==0)// medice sch. or log
     {
      if (indexPath.row ==0) {
             UITableViewCell * cell4 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell4"];
@@ -309,7 +304,7 @@
             }
 
     }
-    else if (indexPath.section ==2)
+    else if (indexPath.section ==1) // t&c
     {
         if (indexPath.row==0) {
             UITableViewCell * cell6 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell6"];
@@ -318,7 +313,7 @@
         
         }
             }
-    else if (indexPath.section ==3)
+    else if (indexPath.section ==2)//webseite
     {
         if (indexPath.row==0) {
             UITableViewCell * cell7 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell7"];
@@ -327,7 +322,7 @@
             
         }
     }
-    else if (indexPath.section ==4)
+    else if (indexPath.section ==3)//support
     {
         if (indexPath.row==0) {
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -340,7 +335,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section==4) {
+    if (indexPath.section==3) {
         if (indexPath.row==0) {
             return 387;
         }
@@ -352,22 +347,34 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section==1)
+    if (indexPath.section==0)
     {
 
     if (indexPath.row==1) {
+        
+        //calculation of log
+        
        // UITableViewCell * cell5 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell5"];
+        // fetch data by database table
+        
         NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Add"];
         self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
         
-        NSArray *info;  // this array contains your data
+       // NSArray *info;  // this array contains your data
         int counter=[self.devices count];
         
         NSMutableArray *name=[[NSMutableArray alloc] init];
         for(int i=0;i<counter;i++)
         {
             NSDictionary *currentObject=[self.devices objectAtIndex:i];
+           
+            if ([[currentObject valueForKey:@"pillschedualstatus"] isEqualToString:@"delete"]) {
+                NSLog(@"no add in calender");
+            }
+            
+           
+            else{
             startdate=[currentObject valueForKey:@"startdate"];
             pill = [currentObject valueForKey:@"pill"];
             doses = [currentObject valueForKey:@"dose"];
@@ -408,8 +415,13 @@
             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
             [dateFormat setDateFormat:@"dd-MM-yyyy"];
             
-            NSDate *startDate = [dateFormat dateFromString:startdate];
-            NSDate *endDate = [dateFormat dateFromString:@"10-01-2017"];
+            NSDate *startDate = [dateFormat dateFromString:startdate];//start date
+            
+            NSDate *todayDate = [NSDate date];
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+            NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];
+            NSDate *endDate = [dateFormat dateFromString:convertedDateString];// end date
             
             [dateFormat setDateFormat:@"dd-MM-yyyy, EEEE"];
             
@@ -521,8 +533,8 @@
             }
             
             [name removeAllObjects];
-            
-        }
+            }
+            }
         
         //return cell5;
         
@@ -531,7 +543,7 @@
         [self presentViewController:destVC animated:YES completion:nil];
     }
     }
-    else if (indexPath.section ==3)
+    else if (indexPath.section ==2)
     {
         if (indexPath.row==0) {
             UITableViewCell * cell6 = [tableView dequeueReusableCellWithIdentifier:@"CustomTableViewCell6"];
@@ -549,17 +561,17 @@
     NSLog(@"done");
     
     }
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
-{
-    if(textField.tag == 1)
-    {
-       
-        [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:@"preferenceName"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-
-    }
-    return YES;
-}
+//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+//{
+//    if(textField.tag == 1)
+//    {
+//       
+//        [[NSUserDefaults standardUserDefaults] setObject:textField.text forKey:@"preferenceName"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//    }
+//    return YES;
+//}
 
 
 @end

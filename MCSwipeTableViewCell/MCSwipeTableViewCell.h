@@ -178,6 +178,8 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *takentime;
 @property (weak, nonatomic) IBOutlet UILabel *dose_lbl;
+@property (weak, nonatomic) IBOutlet UILabel *dash_lbl;
+@property (weak, nonatomic) IBOutlet UILabel *all_lbl;
 
 
 @end

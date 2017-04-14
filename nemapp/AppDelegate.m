@@ -15,10 +15,10 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize notificationAlert = _notificationAlert;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //sleep(5);
+     sleep(5);
   
      UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     if([[NSUserDefaults standardUserDefaults] valueForKey:@"AlreadyLogi"])
@@ -49,39 +49,56 @@
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"is_first_time"]) {
         [application cancelAllLocalNotifications]; // Restart the Local Notifications list
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"is_first_time"];
-        NSLog(@"ankur %@",application);
+        //NSLog(@"ankur %@",application);
     }
-    [self renumberBadgesOfPendingNotifications];
-   
+//    UILocalNotification*localNotification = [[UILocalNotification alloc]init];
+//    NSUInteger nextBadgeNumber = [[[UIApplication sharedApplication] scheduledLocalNotifications] count] + 1;
+//    localNotification.applicationIconBadgeNumber = nextBadgeNumber;
+    
+    
+    // [[UIApplication sharedApplication] cancelAllLocalNotifications];
+   //NSLog(@"notification ====== %@",[[UIApplication sharedApplication] scheduledLocalNotifications]);
+
     return YES;
 }
-- (void)renumberBadgesOfPendingNotifications
-{
-    // clear the badge on the icon
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//- (void)renumberBadgesOfPendingNotifications
+//{
+//    // clear the badge on the icon
+//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//    
+//    // first get a copy of all pending notifications (unfortunately you cannot 'modify' a pending notification)
+//    NSArray *pendingNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+//    NSLog(@"notification ====== %@",pendingNotifications);
+//    
+//    // if there are any pending notifications -> adjust their badge number
+//    if (pendingNotifications.count != 0)
+//    {
+//        // clear all pending notifications
+//        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+//        
+//        // the for loop will 'restore' the pending notifications, but with corrected badge numbers
+//        // note : a more advanced method could 'sort' the notifications first !!!
+//        NSUInteger badgeNbr = 1;
+//        
+//        for (UILocalNotification *notification in pendingNotifications)
+//        {
+//            // modify the badgeNumber
+//            notification.applicationIconBadgeNumber = badgeNbr++;
+//            
+//            // schedule 'again'
+//            [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+//        }
+//    }
+//}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+   
+    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Please take your medication" message:[notification alertBody] delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
     
-    // first get a copy of all pending notifications (unfortunately you cannot 'modify' a pending notification)
-    NSArray *pendingNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    [alert show];
+   
+
     
-    // if there are any pending notifications -> adjust their badge number
-    if (pendingNotifications.count != 0)
-    {
-        // clear all pending notifications
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-        
-        // the for loop will 'restore' the pending notifications, but with corrected badge numbers
-        // note : a more advanced method could 'sort' the notifications first !!!
-        NSUInteger badgeNbr = 1;
-        
-        for (UILocalNotification *notification in pendingNotifications)
-        {
-            // modify the badgeNumber
-            notification.applicationIconBadgeNumber = badgeNbr++;
-            
-            // schedule 'again'
-            [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-        }
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -91,6 +108,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+     //[self renumberBadgesOfPendingNotifications];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 //    NSArray *arrayOfLocalNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications] ;

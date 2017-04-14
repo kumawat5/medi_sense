@@ -50,13 +50,13 @@ static NSUInteger const kMCNumItems = 7;
     [super viewDidLoad];
    
     
-   
+   // _devices =  [[NSMutableArray alloc]init];
    //---------------------------------------------------------//
     
    //all notification NSLog---------
     //NSLog(@"scheduled notifications: --%@----", [[UIApplication sharedApplication] scheduledLocalNotifications]);
     
-    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -89,7 +89,8 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
    fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(m = %@)", @"Monday"];
-     _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        
+     _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
     [self.tableView reloadData];
     }
     //tuesday
@@ -101,7 +102,7 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(tu = %@)", @"Tuesday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
         [self.tableView reloadData];
     }
     //wednesday
@@ -113,7 +114,7 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(w = %@)", @"Wednesday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
         [self.tableView reloadData];
     }
     //thursday
@@ -125,7 +126,7 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(th = %@)", @"Thursday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
         [self.tableView reloadData];
     }
     //friday
@@ -155,7 +156,7 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(sa = %@)", @"Saturday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
         [self.tableView reloadData];
     }
     //sunday
@@ -167,7 +168,7 @@ static NSUInteger const kMCNumItems = 7;
         [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:
                                           [[NSSortDescriptor alloc] initWithKey:@"hr24time" ascending:YES],nil]];
         fetchRequest.predicate = [NSPredicate predicateWithFormat: @"(su = %@)", @"Sunday"];
-        _devices = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        _devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
         [self.tableView reloadData];
     }
     
@@ -283,10 +284,18 @@ static NSUInteger const kMCNumItems = 7;
         if (indexPath.row % kMCNumItems == i) {
             if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
             {
+                cell.name_dose.hidden=YES;
+                cell.dose_lbl.hidden=YES;
+                cell.dash_lbl.hidden=YES;
+                
                 [cell.name_dose setText:[NSString stringWithFormat:@"%@", [device valueForKey:@"pill"]]];
+               
                 [cell.dose_lbl setText:[device valueForKey:@"dose"]];
+                
                 [cell.time setText:[device valueForKey:@"time"]];
                 [cell.takentime setText:[device valueForKey:@"timetakentoday"]];
+                
+                [cell.all_lbl setText:[NSString stringWithFormat:@"%@-%@",[device valueForKey:@"pill"],[device valueForKey:@"dose"]]];
                 
                 cell.dot.layer.cornerRadius = 5;
                 cell.dot.layer.masksToBounds = YES;
@@ -294,11 +303,14 @@ static NSUInteger const kMCNumItems = 7;
             }
             else
             {
-            
+            cell.name_dose.hidden=YES;
+            cell.dose_lbl.hidden=YES;
+            cell.dash_lbl.hidden=YES;
             [cell.name_dose setText:[NSString stringWithFormat:@"%@", [device valueForKey:@"pill"]]];
             [cell.dose_lbl setText:[device valueForKey:@"dose"]];
             [cell.time setText:[device valueForKey:@"time"]];
             //[cell.takentime setText:[device valueForKey:@"timetakentoday"]];
+                [cell.all_lbl setText:[NSString stringWithFormat:@"%@-%@",[device valueForKey:@"pill"],[device valueForKey:@"dose"]]];
             
             cell.dot.layer.cornerRadius = 5;
             cell.dot.layer.masksToBounds = YES;
@@ -310,27 +322,27 @@ static NSUInteger const kMCNumItems = 7;
             
             if ([[device valueForKey:@"todaydate"] isEqualToString:convertedDateString] && [[device valueForKey:@"todaystatus"] isEqualToString:@"taken"])
             {
-                NSLog(@"GREEN");
+                //NSLog(@"GREEN");
                 [cell.dot setBackgroundColor:[UIColor colorWithRed:47.0/255.0 green:92.0/255.0 blue:5.0/255.0 alpha:1.0]];
                 
             }
             else if ([[device valueForKey:@"hr24time"] floatValue]  < [TimeString floatValue] )
             {
-                NSLog(@"data time %@",[device valueForKey:@"hr24time"]);
-                NSLog(@"RED");
+               // NSLog(@"data time %@",[device valueForKey:@"hr24time"]);
+                //NSLog(@"RED");
                 [cell.dot setBackgroundColor:[UIColor redColor]];
             }
             
             else
             {
-                NSLog(@"Blue");
+               // NSLog(@"Blue");
                 [cell.dot setBackgroundColor:[UIColor blueColor]];
             }
 
             
             [cell setSwipeGestureWithView:checkView color:greenColor mode:MCSwipeTableViewCellModeSwitch state:MCSwipeTableViewCellState1 completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
-                NSLog(@"Did swipe \"Checkmark 1\" cell");
-                NSLog(@"uhsfigh %ld", (long)indexPath.row);
+                //NSLog(@"Did swipe \"Checkmark 1\" cell");
+               // NSLog(@"uhsfigh %ld", (long)indexPath.row);
                 NSDateFormatter* day = [[NSDateFormatter alloc] init];
                 [day setDateFormat: @"EEEE"];
                 
@@ -344,10 +356,11 @@ static NSUInteger const kMCNumItems = 7;
                 //current date
                 NSDate *todayDate = [NSDate date];
                 NSDateFormatter *dateFormatters = [[NSDateFormatter alloc] init];
-                [dateFormatters setDateFormat:@"dd-MM-yyyy"];         NSString *convertedDateString = [dateFormatters stringFromDate:todayDate];
+                [dateFormatters setDateFormat:@"dd-MM-yyyy"];
+                NSString *convertedDateString = [dateFormatters stringFromDate:todayDate];
                 //-------------------------//
                 NSIndexPath *indexPaths = [self.tableView indexPathForCell:cell];
-                NSLog(@"%ld",(long)indexPaths.row);
+                //NSLog(@"%ld",(long)indexPaths.row);
                 //new-------------------------------
                 NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
                 // Define our table/entity to use
@@ -379,14 +392,14 @@ static NSUInteger const kMCNumItems = 7;
                 if (([[mutableFetchResults valueForKey:@"pill"]
                       containsObject:cells.name_dose.text]) && [[mutableFetchResults valueForKey:@"datetaken"]containsObject:convertedDateString] ){
                     //Alert user or handle your duplicate methods from here
-                    NSLog(@"exist");
+                   // NSLog(@"exist");
                     //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!"message:@"Today already taken pill"
                     //        delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil];
                     //            [alert show];
                 }
                 else
                 {
-                    NSLog(@"not exist");
+                   // NSLog(@"not exist");
                     //new device
                     NSManagedObjectContext *context = [self managedObjectContext];
                     NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Cal" inManagedObjectContext:context];
@@ -431,7 +444,7 @@ static NSUInteger const kMCNumItems = 7;
                 //  NSIndexPath *indexPathcal = [self.tableView indexPathForCell:cell];
                 MCSwipeTableViewCell*cellcal = [self.tableView cellForRowAtIndexPath:indexPaths];
                 fetchRequest.predicate = [NSPredicate predicateWithFormat: @ "(datetaken == %@) && (pill == %@)", convertedDateString ,cellcal.name_dose.text];
-                _dev = [managedObjectContextcal executeFetchRequest:fetchRequest error:nil];
+                _dev = [[managedObjectContextcal executeFetchRequest:fetchRequest error:nil]mutableCopy];
                 for (NSManagedObject *obj in _dev) {
                     NSData *dataImage = [[NSData alloc] init];
                     dataImage = UIImagePNGRepresentation([UIImage imageNamed:@"Screen Shot 2016-12-21 at 5.18.55 PM.png"]);
@@ -451,12 +464,14 @@ static NSUInteger const kMCNumItems = 7;
             //            NSLog(@"Did swipe \"Cross\" cell");
             //        }];
             
+            
+            /////////////-------------------swipe right to left------------------------------//////////////////
             [cell setSwipeGestureWithView:clockView color:yellowColor mode:MCSwipeTableViewCellModeSwitch state:MCSwipeTableViewCellState3 completionBlock:^(MCSwipeTableViewCell *cell, MCSwipeTableViewCellState state, MCSwipeTableViewCellMode mode) {
                 NSLog(@"Did swipe \"Clock\" cell");
                 NSLog(@"uhsfigh %ld", (long)indexPath.row);
                 NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
                 MCSwipeTableViewCell*cells = [self.tableView cellForRowAtIndexPath:cellIndexPath];
-                NSLog(@"ankur%@",cells.name_dose.text);
+                //NSLog(@"ankur%@",cells.name_dose.text);
                 NSManagedObject *selectedDevices = [self.devices objectAtIndex:[self.tableView indexPathForCell:cell].row];
                 
                 [selectedDevices setValue:@"" forKeyPath:@"timetakentoday"];
@@ -488,7 +503,7 @@ static NSUInteger const kMCNumItems = 7;
                 //  NSIndexPath *indexPathcal = [self.tableView indexPathForCell:cell];
                 MCSwipeTableViewCell*cellcal = [self.tableView cellForRowAtIndexPath:indexPaths];
                 fetchRequest.predicate = [NSPredicate predicateWithFormat: @ "(datetaken == %@) && (pill == %@)", convertedDateString ,cellcal.name_dose.text];
-                _dev = [managedObjectContextcal executeFetchRequest:fetchRequest error:nil];
+                _dev = [[managedObjectContextcal executeFetchRequest:fetchRequest error:nil]mutableCopy];
                  NSError *error = nil;
                 if (!error && _dev.count > 0) {
                     for(NSManagedObject *managedObject in _dev){
